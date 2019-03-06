@@ -1,0 +1,16 @@
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\obj\Debug\TestClass.csprojAssemblyReference.cache
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\obj\Debug\TestClass.csproj.CoreCompileInputs.cache
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\TestClass.dll
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\TestClass.pdb
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\ClassLibrary.dll
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\ClassLibrary.pdb
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\obj\Debug\TestClass.csproj.CopyComplete
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\obj\Debug\TestClass.dll
+H:\Desktop\FYP\Irish Woollens Co-Op\TestClass\obj\Debug\TestClass.pdb
