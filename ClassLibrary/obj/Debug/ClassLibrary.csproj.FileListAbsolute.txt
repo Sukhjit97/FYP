@@ -4,3 +4,9 @@ H:\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.csprojAs
 H:\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\Sukhi_000\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\Sukhi_000\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\Sukhi_000\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Sukhi_000\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Sukhi_000\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\Sukhi_000\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.pdb
