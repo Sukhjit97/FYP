@@ -74,7 +74,7 @@ namespace TestClass
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //create some test data to assign to the property 
-            String EmailAddress = "s_1@homtail.co.uk";
+            String EmailAddress = "d_1@homtail.co.uk";
             //assign the data to the property
             ACustomer.EmailAddress = EmailAddress;
             //test to see that the two values are the same
@@ -87,7 +87,7 @@ namespace TestClass
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //create some test data to assign to the property 
-            String Firstname = "shivani";
+            String Firstname = "Diljit";
             //assign the data to the property
             ACustomer.Firstname = Firstname;
             //test to see that the two values are the same
@@ -100,7 +100,7 @@ namespace TestClass
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //create some test data to assign to the property 
-            String Surname = "khushal";
+            String Surname = "Sanghera";
             //assign the data to the property
             ACustomer.Surname = Surname;
             //test to see that the two values are the same
@@ -504,7 +504,7 @@ namespace TestClass
             string Address = "20 Star Street";
             string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
-            string Firstname = "Sukhjit"; 
+            string Firstname = "Sukhjit";
             string Surname = ""; //this should trigger an error
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
@@ -525,7 +525,7 @@ namespace TestClass
             string Address = "20 Star Street";
             string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
-            string Firstname = "Sukhjit"; 
+            string Firstname = "Sukhjit";
             string Surname = "k"; //this should be ok
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
@@ -674,7 +674,7 @@ namespace TestClass
             string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = ""; //this should trigger an error
             string Firstname = "Sukhjit";
-            string Surname = "Kaur"; 
+            string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
             //invoke the method
@@ -788,8 +788,6 @@ namespace TestClass
             Assert.AreNotEqual(Error, "");
         }
 
-
-
         [TestMethod]
         public void EmailAddressMid()
         {
@@ -833,41 +831,502 @@ namespace TestClass
             Assert.AreNotEqual(Error, "");
         }
 
+        [TestMethod]
+        public void PasswordMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = ""; // this should trigger an error
+            string TelephoneNumber = "01161357956";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PasswordMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "a"; // this should be ok
+            string TelephoneNumber = "01161357956";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PasswordMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "aa"; // this should be ok
+            string TelephoneNumber = "01161357956";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PasswordMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "aaaaaaaaaaaaaaa"; // this should be ok
+            string TelephoneNumber = "01161357956";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PasswordMaxBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "aaaaaaaaaaaaaaaa"; // this should be ok
+            string TelephoneNumber = "01161357956";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PasswordMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "aaaaaaaaaaaaaaaaa"; // this should trigger an error
+            string TelephoneNumber = "01161357956";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PasswordMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "aaaaaaaa"; // this should be ok
+            string TelephoneNumber = "01161357956";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void PasswordExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "";
+            Password = Password.PadRight(500, 's'); //this should fail
+            string TelephoneNumber = "01161357956";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void TelephoneNumberMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = ""; //this should trigger an error
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void TelephoneNumberMinBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "0"; //this should be ok
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void TelephoneNumberMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01"; //this should be ok
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void TelephoneNumberMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "0123456789"; //this should be ok
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void TelephoneNumberMaxBoundary()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01234567890"; //this should be ok
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void TelephoneNumberMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "012345678901"; //this should trigger an error
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void TelephoneNumberMid()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01234"; //this should be ok
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void TelephoneNumberExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //create a string variable to store the result of the validation
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string DateRegistered = DateTime.Now.Date.ToString();
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "";
+            Password = Password.PadRight(500, '0'); //this should fail
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void DateRegisteredExtremeMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //string variable to store any error message
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01161357956";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date to todays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is less than 100 years
+            TestDate = TestDate.AddYears(-100);
+            //convert the date variable to a string variable
+            string DateRegistered = TestDate.ToString();
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void DateRegisteredMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //string variable to store any error message
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01161357956";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date to todays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is less than 1 day
+            TestDate = TestDate.AddDays(-1);
+            //convert the date variable to a string variable
+            string DateRegistered = TestDate.ToString();
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void DateRegisteredMin()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //string variable to store any error message
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01161357956";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date to todays date
+            TestDate = DateTime.Now.Date;
+            //convert the date variable to a string variable
+            string DateRegistered = TestDate.ToString();
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void DateRegisteredMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //string variable to store any error message
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01161357956";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date to todays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is plus 1 day
+            TestDate = TestDate.AddDays(1);
+            //convert the date variable to a string variable
+            string DateRegistered = TestDate.ToString();
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
+        [TestMethod]
+        public void DateRegisteredExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //string variable to store any error message
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01161357956";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date to todays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is less than 1 day
+            TestDate = TestDate.AddYears(100);
+            //convert the date variable to a string variable
+            string DateRegistered = TestDate.ToString();
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        [TestMethod]
+        public void DateRegisteredInvalidData()
+        {
+            //create an instance of the class we want to create
+            clsCustomer ACustomer = new clsCustomer();
+            //string variable to store any error message
+            string Error = "";
+            //create some test data to use with the method 
+            string Address = "20 Star Street";
+            string EmailAddress = "Sukhjit@hotmail.co.uk";
+            string Firstname = "Sukhjit";
+            string Surname = "Kaur";
+            string Password = "Amsterdam";
+            string TelephoneNumber = "01161357956";
+            //set the DateRegistered to a non date value
+            string DateRegistered = "This is note a date!";
+            //invoke the method
+            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
     }
 }

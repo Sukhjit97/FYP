@@ -18,6 +18,8 @@ namespace ClassLibrary
         {
             //string variable to store the error message
             string Error = "";
+            //create a temporary vairable to store date values
+            DateTime DateTemp;
             //if the address field is more than 50 characters 
             if (Address.Length > 50)
             {
@@ -28,6 +30,28 @@ namespace ClassLibrary
             {
                 //retrun an error message
                 Error = "The address field may not be blank!";
+            }
+            try
+            {
+                //copy the DateRegistered value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(DateRegistered);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                //check the see if the date is greater than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date was not a valid date : ";
+
             }
             if (EmailAddress.Length > 50)
             {
@@ -61,28 +85,30 @@ namespace ClassLibrary
                 //retrun an error message
                 Error = "The surname field may not be blank!";
             }
-            //return the value Error
+            //if the password field is more than 16 characters
+            if (Password.Length > 16)
+            {
+                //return an error message
+                Error = "The password field cannot have more than 16 characters";
+            }
+            if (Password.Length == 0)
+            {
+                //retrun an error message
+                Error = "The password field may not be blank!";
+            }
+            //if the telephone number field is more than 11 characters
+            if (TelephoneNumber.Length > 11)
+            {
+                //return an error message
+                Error = "The telephone number field cannot have more than 11 characters";
+            }
+            if (TelephoneNumber.Length == 0)
+            {
+                //retrun an error message
+                Error = "The telephone number field may not be blank!";
+            }
+            //return any error messages
             return Error;
-
-
-            //if the date registered field is not blank
-            if (DateRegistered != "")
-            {
-                //return a blank string
-                return "";
-            }
-            //if the password field is not blank
-            if (Password != "")
-            {
-                //return a blank string
-                return "";
-            }
-            //if the telephone number field is not blank
-            if (TelephoneNumber != "")
-            {
-                //return a blank string
-                return "";
-            }
         }
     }
 }
