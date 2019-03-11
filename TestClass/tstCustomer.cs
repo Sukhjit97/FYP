@@ -1354,11 +1354,11 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
-            if (ACustomer.CustomerID != 5)
+            if (ACustomer.CustomerID != 2)
             {
                 OK = false;
             }
@@ -1376,7 +1376,7 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
@@ -1398,7 +1398,7 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
@@ -1420,7 +1420,7 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
@@ -1442,7 +1442,7 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
@@ -1464,7 +1464,7 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
@@ -1486,7 +1486,7 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
@@ -1508,7 +1508,7 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
@@ -1530,7 +1530,7 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 CustomerID = 5;
+            Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
             //check the customer id
