@@ -74,7 +74,7 @@ namespace TestClass
             //create an instance of the class we want to create
             clsCustomer ACustomer = new clsCustomer();
             //create some test data to assign to the property 
-            String EmailAddress = "d_1@homtail.co.uk";
+            String EmailAddress = "d_1@hotmail.co.uk";
             //assign the data to the property
             ACustomer.EmailAddress = EmailAddress;
             //test to see that the two values are the same
@@ -1162,7 +1162,7 @@ namespace TestClass
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "";
-            Password = Password.PadRight(500, '0'); //this should fail
+            TelephoneNumber = TelephoneNumber.PadRight(500, '0'); //this should fail
             //invoke the method
             Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
             //test to see that the result is correct
@@ -1379,7 +1379,7 @@ namespace TestClass
             Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
-            //check the customer id
+            //check the property
             if (ACustomer.Active != true)
             {
                 OK = false;
@@ -1401,7 +1401,7 @@ namespace TestClass
             Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
-            //check the customer id
+            //check the property
             if (ACustomer.Address != "72 Freedom Street")
             {
                 OK = false;
@@ -1423,7 +1423,7 @@ namespace TestClass
             Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
-            //check the customer id
+            //check the property
             if (ACustomer.DateRegistered != Convert.ToDateTime("20/02/2019"))
             {
                 OK = false;
@@ -1445,7 +1445,7 @@ namespace TestClass
             Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
-            //check the customer id
+            //check the property
             if (ACustomer.EmailAddress != "Freedom@hotmail.co.uk")
             {
                 OK = false;
@@ -1467,7 +1467,7 @@ namespace TestClass
             Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
-            //check the customer id
+            //check the property
             if (ACustomer.Firstname != "Jasmine")
             {
                 OK = false;
@@ -1489,7 +1489,7 @@ namespace TestClass
             Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
-            //check the customer id
+            //check the property
             if (ACustomer.Surname != "Flex")
             {
                 OK = false;
@@ -1511,7 +1511,7 @@ namespace TestClass
             Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
-            //check the customer id
+            //check the property
             if (ACustomer.Password != "County5")
             {
                 OK = false;
@@ -1533,7 +1533,7 @@ namespace TestClass
             Int32 CustomerID = 2;
             //invoke the method
             Found = ACustomer.Find(CustomerID);
-            //check the customer id
+            //check the property
             if (ACustomer.TelephoneNumber != "01165678901")
             {
                 OK = false;
