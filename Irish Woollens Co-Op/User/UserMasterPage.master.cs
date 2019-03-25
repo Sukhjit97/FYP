@@ -15,13 +15,13 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         //redirect to the login page
-        Response.Redirect("LoginPage.aspx");
+        Response.Redirect("Default.aspx");
        
     }
 
     protected void btnRegister_Click(object sender, EventArgs e)
     {
         //redirect to the registeration page
-        Response.Redirect("RegisterPage.aspx");
+        Response.Redirect("Registeration.aspx");
     }
 }

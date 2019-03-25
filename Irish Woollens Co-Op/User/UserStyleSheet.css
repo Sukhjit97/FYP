@@ -73,13 +73,14 @@ html {
 .Logo-column {
     padding: 10px;
 }
-
-/*
-    /* CSS Flexbox - styling the row for the jumper images to be placed into 
-.Jumper-Images-row {
+t
+.Jummpper-Images-row {
     display: flex;
 }
-    */
+    
+
+/* Creates three equalul columns that sit next to each other */
+.Jumper-Images-co
 
 /* Creates three equal columns that sit next to each other */
 .Jumper-Images-column {
@@ -91,9 +92,11 @@ html {
 }
 
 * {
-    margin: 0;
     padding: 0;
     text-decoration: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
 }
 
 .socialmedia {

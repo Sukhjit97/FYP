@@ -11,14 +11,13 @@ using System.Web.UI.WebControls;
 public partial class User_Default : System.Web.UI.Page
 {
     SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["Key"]);
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
 
-   
-
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Login_Click(object sender, EventArgs e)
     {
         string enteredPassword = txtPassword.Text;
 
@@ -36,7 +35,7 @@ public partial class User_Default : System.Web.UI.Page
 
 
         con.Open();
-        string qry = "select * from tblCustomer where EmailAddress='" + txtusername.Text + "' and Password='" + hashedPassword + "'";
+        string qry = "select * from tblCustomer where EmailAddress='" + txtEmailAddress.Text + "' and Password='" + hashedPassword + "'";
         SqlCommand cmd = new SqlCommand(qry, con);
         SqlDataReader dr = cmd.ExecuteReader();
         if (dr.Read())
@@ -47,7 +46,7 @@ public partial class User_Default : System.Web.UI.Page
         }
         else
         {
-            Response.Write("<script type='text/javascript'>alert('Invalid USername or Password..!');</script>");
+            Response.Write("<script type='text/javascript'>alert('Invalid Email Address or Password..!');</script>");
         }
 
         con.Close();

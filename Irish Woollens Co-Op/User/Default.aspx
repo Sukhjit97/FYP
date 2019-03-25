@@ -6,18 +6,18 @@
 
 
 
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    <asp:TextBox ID="txtusername" runat="server"></asp:TextBox>
+    <asp:Label ID="Label1" runat="server" Text="Email Address:"></asp:Label>
+    <asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
 
 
     
-    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
     <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
 
 
 
 
-    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Login_Click" />
 
 
 

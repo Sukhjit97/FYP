@@ -15,7 +15,7 @@
     <%--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">--%>
     <div class="Logo-row">
       <div class="Logo-column">
-            <asp:Image ID="Logo" ImageUrl="Webiste-Logo.png" runat="server" Height="134px" Width="182px" />
+            <asp:Image ID="Logo" ImageUrl="Website-Logo.png" runat="server" Height="134px" Width="182px" />
         </div>
                   <header class="title">
               Irish Woollens Co-Operative</header>
@@ -27,7 +27,7 @@
     </li>
     <li><a href="ViewCatalogue.aspx">View Catalogue</a>
     </li>
-    <li><a href="PlaceOrders.aspx">Place Orders</a>
+    <li><a href="PlaceOrders.aspx">Add New Knitter</a>
     </li>
     <li><a href="EditPersonalDetails.aspx">Edit Personal Details</a>
     </li>
@@ -42,7 +42,6 @@
               <asp:Button ID="btnLogin" runat="server" Text="Login" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" OnClick="btnLogin_Click" Width="59px" />
               <asp:Button ID="btnRegister" runat="server" style="background-color: #FF9966; font-size: small; font-family: 'Kristen ITC';" Text="Register" OnClick="btnRegister_Click" Width="70px" />
           </div>
-
 
 
     <%--  <div class="Jumper-Images-column">
@@ -63,9 +62,9 @@
         </div>
 
 
-         <%-- <!-- footer section of the page -->
+          <!-- footer section of the page -->
 <hr />
-        <div class="footer">
+<%--        <div class="footer">
   <footer>
       <ul class="socialmedia">
 		<li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
@@ -76,8 +75,8 @@
       <div class="footer-text">
           <p>Copyright © 2019 Irish Woollens Co-Operative | All Rights Reserved | Sukhjit Kaur</p>
       </div>
-  </footer>
-        </div>--%>
+  </footer>--%>
+        </div>
     </form>
 </body>
 </html>
