@@ -25,17 +25,17 @@ namespace ClassLibrary
                 return "";
             }
             //if the price field is not blank
-            if (Price != "")
-            {
-                //return a blank string
-                return "";
-            }
+            //if (Price != "")
+            //{
+            //    //return a blank string
+            //    return "";
+            //}
             //if the name field is not blank
-            if (Quantity != "")
-            {
-                //return a blank string
-                return "";
-            }
+            //if (Quantity != "")
+            //{
+            //    //return a blank string
+            //    return "";
+            //}
             else
             {
                 //otherwise return an error message
