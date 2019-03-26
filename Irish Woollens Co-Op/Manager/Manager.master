@@ -33,14 +33,16 @@
     </li>
     <li><a href="ViewExistingOrders.aspx">View Existing Orders</a>
     </li>
+       <li><a href="AddNewKnitter.aspx">Add New knitter</a>
+    </li>
   </ul>
 
 <div>
       
     </div>
           <div class="buttons">
-              <asp:Button ID="btnLogin" runat="server" Text="Login" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" OnClick="btnLogin_Click" Width="59px" />
-              <asp:Button ID="btnRegister" runat="server" style="background-color: #FF9966; font-size: small; font-family: 'Kristen ITC';" Text="Register" OnClick="btnRegister_Click" Width="70px" />
+              <asp:Button ID="btnLogin" runat="server" Text="Login" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" Width="59px" />
+              <asp:Button ID="btnRegister" runat="server" style="background-color: #FF9966; font-size: small; font-family: 'Kristen ITC';" Text="Register" Width="70px" />
           </div>
 
 
@@ -76,7 +78,7 @@
           <p>Copyright © 2019 Irish Woollens Co-Operative | All Rights Reserved | Sukhjit Kaur</p>
       </div>
   </footer>--%>
-        </div>
+       <%-- </div>--%>
     </form>
 </body>
 </html>

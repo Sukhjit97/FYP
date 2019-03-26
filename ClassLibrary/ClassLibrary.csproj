@@ -45,6 +45,7 @@
     <Compile Include="clsItem.cs" />
     <Compile Include="clsManager.cs" />
     <Compile Include="clsStaff.cs" />
+    <Compile Include="clsStaffCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
