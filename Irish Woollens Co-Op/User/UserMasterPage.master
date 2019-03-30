@@ -21,17 +21,19 @@
               Irish Woollens Co-Operative</header>
         </div>
 
-  <!-- responsive navbar -->
+<!-- responsive navbar -->
   <ul class="topnav">
     <li><a class="active" href="Home.aspx">Home</a>
     </li>
     <li><a href="ViewCatalogue.aspx">View Catalogue</a>
     </li>
-    <li><a href="PlaceOrders.aspx">Add New Knitter</a>
+    <li><a href="PlaceOrders.aspx">Place Orders</a>
     </li>
     <li><a href="EditPersonalDetails.aspx">Edit Personal Details</a>
     </li>
     <li><a href="ViewExistingOrders.aspx">View Existing Orders</a>
+    </li>
+    <li><a href="Feedback.aspx">Feedback</a>
     </li>
   </ul>
 

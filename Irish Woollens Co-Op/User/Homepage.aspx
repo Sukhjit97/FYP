@@ -38,14 +38,14 @@ img {vertical-align: middle;}
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a pink background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: lightpink;
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: deeppink;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -54,9 +54,9 @@ img {vertical-align: middle;}
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
+/* Number text (1/5 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: deeppink;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -108,21 +108,33 @@ img {vertical-align: middle;}
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+  <div class="numbertext">1 / 5</div>
+  <img src="Jumper-4.jpg" style="width:60%">
+  <div class="text">Design of Jumper</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
+  <div class="numbertext">2 / 5</div>
+  <img src="Knitting.jpg" style="width:60%">
+  <div class="text">Knitting</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
+  <div class="numbertext">3 / 5</div>
+  <img src="KnittingPins.jpg" style="width:60%">
+  <div class="text">Knitting Pins</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="Pattern.jpg" style="width:60%">
+  <div class="text">A Knitting Pattern</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="ColourfulWool.jpg" style="width:60%">
+  <div class="text">Colourful Wool</div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -134,7 +146,9 @@ img {vertical-align: middle;}
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
 </div>
 
 <script>
