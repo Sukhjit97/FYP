@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Knitter.master.cs" Inherits="Knitter_Knitter" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="KnitterStyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Logo-row">
+      <div class="Logo-column">
+            <asp:Image ID="Logo" ImageUrl="Webiste-Logo.png" runat="server" Height="134px" Width="182px" />
+        </div>
+                  <header class="title">
+              Irish Woollens Co-Operative</header>
+        </div>
+
+  <!-- responsive navbar -->
+  <ul class="topnav">
+    <li><a class="active" href="Home.aspx">Home</a>
+    </li>
+    <li><a href="ViewCatalogue.aspx">View Catalogue</a>
+    </li>
+    <li><a href="Orders.aspx">Orders</a>
+    </li>
+    <li><a href="SearchItem.aspx">Search Item</a>
+    </li>
+  </ul>
+
+<div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div class="buttonLogout">
+           <%-- <asp:Button ID="btnLogout" runat="server" Text="Logout" style="color: #000000; font-size: small; font-family: 'Kristen ITC'; background-color: #FF9966" Width="65px" />--%>
+        </div>
+
+
+      <div class="Jumper-Images-column">
+          <img src="Jumper-1.jpg" />
+        </div>
+          <div class="Jumper-Images-column">
+          <img src="Jumper-2.jpg" />
+        </div>
+          <div class="Jumper-Images-column">
+          <img src="Jumper-3.jpg" />
+        </div>
+
+  <!-- footer section of the page -->
+<hr />
+        <div class="footer">
+  <footer>
+      <ul class="socialmedia">
+		<li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+  	<li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+	  <li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
+		</ul>
+      <div class="footer-text">
+          <p>Copyright © 2019 Irish Woollens Co-Operative | All Rights Reserved | Sukhjit Kaur</p>
+      </div>
+  </footer>
+            </div>
+    </form>
+</body>
+</html>
+

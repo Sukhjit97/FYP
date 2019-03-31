@@ -23,7 +23,7 @@
 
 <!-- responsive navbar -->
   <ul class="topnav">
-    <li><a class="active" href="Home.aspx">Home</a>
+    <li><a class="active" href="Homepage.aspx">Home</a>
     </li>
     <li><a href="ViewCatalogue.aspx">View Catalogue</a>
     </li>

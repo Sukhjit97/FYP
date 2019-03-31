@@ -6,8 +6,7 @@
 
     <div style="height: 408px">
         <div>
-            <asp:button runat="server" text="Add New Knitter" />
-
+            <asp:button runat="server" text="Add New Knitter" OnClick="AddKnitter_Click" />
             </div>
         </div>
 

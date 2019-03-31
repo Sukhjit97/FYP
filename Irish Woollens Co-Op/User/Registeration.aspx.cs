@@ -38,7 +38,7 @@ public partial class Registration : System.Web.UI.Page
 
         SqlCommand cmd = new SqlCommand(qry, con);
         cmd.ExecuteNonQuery();
-        Response.Write("<script type='text/javascript'>alert('Successfully Registration..!');</script>");
+        Response.Write("<script type='text/javascript'>alert('You have successfully registered..!');</script>");
         //Response.Redirect("register.aspx");
         con.Close();
     }

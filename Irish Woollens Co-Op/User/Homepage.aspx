@@ -101,6 +101,23 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+.description {
+	align-items: center;
+	text-align: center;
+	font-family: "segoe ui";
+	font-style: italic;
+	background-color:white;
+	width: 80%;
+	border: 5px solid #FF69B4;
+	padding: 15px;
+	margin-top: 100px;
+	margin-left: 5%;
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -150,6 +167,21 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(4)"></span> 
   <span class="dot" onclick="currentSlide(5)"></span> 
 </div>
+
+
+<p class="description">Hello and welcome to the Showbiz Reviews website!
+      <br />
+      <br />This website is based on TV show reviews, where you can read and add reviews about the latest TV shows that are available to watch.
+      <br />
+      <br />To read the reviews click on the ‘Read Reviews’ button.
+      <br />
+      <br />The ‘Add a Review’ page is where you can write a review yourself about a TV show by filling out the add review form.
+      <br />
+      <br />The ‘Information about TV Shows’ page is where you can use the search facility to search information about TV shows that you are interested in or are considering to watch.</p>
+
+
+
+
 
 <script>
 var slideIndex = 1;
