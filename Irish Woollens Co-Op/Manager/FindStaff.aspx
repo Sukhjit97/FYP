@@ -27,6 +27,5 @@ OnPageIndexChanging="OnPaging" DataKeyNames="StaffID"  >
 </Columns>
 
 </asp:GridView>
-    <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [StaffID], [Address], [EmailAddress], [Firstname], [Surname], [TelephoneNumber] FROM [tblStaff]"></asp:SqlDataSource>--%>
 </asp:Content>
 

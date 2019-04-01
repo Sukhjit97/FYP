@@ -73,12 +73,14 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="StaffID" DataSourceID="SqlDataSource1" GridLines="Vertical" ForeColor="Black">
             <AlternatingRowStyle BackColor="#CCCCCC" />
             <Columns>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 <asp:BoundField DataField="StaffID" HeaderText="StaffID" InsertVisible="False" ReadOnly="True" SortExpression="StaffID"></asp:BoundField>
                 <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address"></asp:BoundField>
                 <asp:BoundField DataField="EmailAddress" HeaderText="EmailAddress" SortExpression="EmailAddress"></asp:BoundField>
                 <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname"></asp:BoundField>
-                <asp:BoundField DataField="TelephoneNumber" HeaderText="TelephoneNumber" SortExpression="TelephoneNumber"></asp:BoundField>
                 <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname"></asp:BoundField>
+                <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password"></asp:BoundField>
+                <asp:BoundField DataField="TelephoneNumber" HeaderText="TelephoneNumber" SortExpression="TelephoneNumber" />
             </Columns>
             <FooterStyle BackColor="#CCCCCC" />
             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -90,7 +92,28 @@
             <sorteddescendingheaderstyle backcolor="#383838" />
         </asp:GridView>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=H:\Desktop\FYP\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [StaffID], [Address], [EmailAddress], [Firstname], [TelephoneNumber], [Surname] FROM [tblStaff]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT * FROM [tblStaff]" DeleteCommand="DELETE FROM [tblStaff] WHERE [StaffID] = @StaffID" InsertCommand="INSERT INTO [tblStaff] ([Address], [EmailAddress], [Firstname], [Surname], [Password], [TelephoneNumber]) VALUES (@Address, @EmailAddress, @Firstname, @Surname, @Password, @TelephoneNumber)" UpdateCommand="UPDATE [tblStaff] SET [Address] = @Address, [EmailAddress] = @EmailAddress, [Firstname] = @Firstname, [Surname] = @Surname, [Password] = @Password, [TelephoneNumber] = @TelephoneNumber WHERE [StaffID] = @StaffID">
+            <DeleteParameters>
+                <asp:Parameter Name="StaffID" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="Address" Type="String" />
+                <asp:Parameter Name="EmailAddress" Type="String" />
+                <asp:Parameter Name="Firstname" Type="String" />
+                <asp:Parameter Name="Surname" Type="String" />
+                <asp:Parameter Name="Password" Type="String" />
+                <asp:Parameter Name="TelephoneNumber" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="Address" Type="String" />
+                <asp:Parameter Name="EmailAddress" Type="String" />
+                <asp:Parameter Name="Firstname" Type="String" />
+                <asp:Parameter Name="Surname" Type="String" />
+                <asp:Parameter Name="Password" Type="String" />
+                <asp:Parameter Name="TelephoneNumber" Type="String" />
+                <asp:Parameter Name="StaffID" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
 
     </div>
 

@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <html>
-<head>
+    
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
@@ -42,7 +41,7 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 15px;
-  margin: 10px;
+  margin: 25px;
 }
 
 
@@ -135,8 +134,6 @@ input[type=submit]:hover {
 
 
 </style>
-</head>
-<body>
 
 <h2>Feedback Form</h2>
     
@@ -144,26 +141,31 @@ input[type=submit]:hover {
  <form action="/action_page.php">
     <div class="row">
       <div class="col-25">
-        <label for="user-name">Firstname:</label>
+        <label for="fname">Firstname:</label> 
       </div>
       <div class="col-75">
-        <input type="text" id="user-name" name="firstname" placeholder="Your firstname..">
+          <asp:TextBox ID="txtfname" runat="server"></asp:TextBox> 
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtfname" ErrorMessage="Please type in your firstname"></asp:RequiredFieldValidator>
+        <%--<input type="text" id="fname" name="firstname" placeholder="Your firstname..">--%>         
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">Surname:</label>
+        <label for="lname">Surname:</label> 
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your surname..">
+              <asp:TextBox ID="txtlname" runat="server"></asp:TextBox>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtlname" ErrorMessage="Please type in your surname"></asp:RequiredFieldValidator>
+        <%--<input type="text" id="lname" name="lastname" placeholder="Your surname.."> --%>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="rating">Rating:</label>
+        <label for="rating">Rating:</label> 
       </div>
       <div class="col-75">
         <select id="rating" name="rating">
+          <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -179,16 +181,17 @@ input[type=submit]:hover {
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="comments">Comments:</label>
+        <label for="comments">Comments:</label> 
       </div>
       <div class="col-75">
-        <textarea id="comments" name="subject" placeholder="Write your comments here..." style="height:200px"></textarea>
+              <asp:TextBox ID="txtcomments" runat="server" TextMode="MultiLine"></asp:TextBox>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtcomments" ErrorMessage="Please type your comments"></asp:RequiredFieldValidator>
+      <%--  <textarea id="comments" name="subject" placeholder="Write your comments here..." style="height:200px"></textarea>--%>
       </div>
     </div>
     <div class="row">
       
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-      
     </div>
   </form>
 </div>
