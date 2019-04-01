@@ -7,7 +7,11 @@
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
-img {vertical-align: middle;}
+img 
+{vertical-align: middle;
+ margin-left: 24%;
+ margin-top: 10%;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -61,6 +65,7 @@ img {vertical-align: middle;}
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  margin-top:10%;
 }
 
 /* The dots/bullets/indicators */
@@ -111,8 +116,8 @@ img {vertical-align: middle;}
 	width: 80%;
 	border: 5px solid #FF69B4;
 	padding: 15px;
-	margin-top: 100px;
-	margin-left: 5%;
+	margin-top: 35px;
+	margin-left: 10.5%;
 }
 
 
@@ -126,31 +131,31 @@ img {vertical-align: middle;}
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 5</div>
-  <img src="Jumper-4.jpg" style="width:60%">
+  <img src="Jumper-4.jpg" style="width:50%">
   <div class="text">Design of Jumper</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 5</div>
-  <img src="Knitting.jpg" style="width:60%">
+  <img src="Knitting.jpg" style="width:50%">
   <div class="text">Knitting</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 5</div>
-  <img src="KnittingPins.jpg" style="width:60%">
+  <img src="KnittingPins.jpg" style="width:50%">
   <div class="text">Knitting Pins</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 5</div>
-  <img src="Pattern.jpg" style="width:60%">
+  <img src="Pattern.jpg" style="width:50%">
   <div class="text">A Knitting Pattern</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">5 / 5</div>
-  <img src="ColourfulWool.jpg" style="width:60%">
+  <img src="ColourfulWool.jpg" style="width:50%">
   <div class="text">Colourful Wool</div>
 </div>
 
