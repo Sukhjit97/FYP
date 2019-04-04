@@ -19,7 +19,7 @@ public partial class User_Default : System.Web.UI.Page
 
     protected void Login_Click(object sender, EventArgs e)
     {
-        string enteredPassword = txtPassword.Text;
+        string enteredPassword = txtPassword.Text + txtEmailAddress.Text;
 
         // Create a new instance of the hash crypto service provider.
         HashAlgorithm hashAlg = new SHA256CryptoServiceProvider();
@@ -40,8 +40,11 @@ public partial class User_Default : System.Web.UI.Page
         SqlDataReader dr = cmd.ExecuteReader();
         if (dr.Read())
         {
+            Session["CustomerID"] = dr["CustomerID"].ToString();
+            Session["Firstname"] = dr["Firstname"].ToString();
+            Session["uid"] = dr["CustomerID"].ToString();
 
-            Response.Redirect("Registration.aspx");
+            Response.Redirect("Homepage.aspx");
 
         }
         else

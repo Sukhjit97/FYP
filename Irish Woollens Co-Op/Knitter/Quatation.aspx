@@ -7,25 +7,25 @@
 
 
    <div>
-       <asp:Label ID="Label1" runat="server" Text="Knitter Name"></asp:Label><asp:TextBox ID="txtname" runat="server"></asp:TextBox>
+       <asp:Label ID="Label1" runat="server" Text="Firstname"></asp:Label><asp:TextBox ID="txtFirstname" runat="server"></asp:TextBox>
 
    </div> 
   
     <div> 
-       <asp:Label ID="Label2" runat="server" Text="Product Name"></asp:Label><asp:TextBox ID="txtProductName" runat="server"></asp:TextBox>
+       <asp:Label ID="Label2" runat="server" Text="Item ID"></asp:Label><asp:TextBox ID="txtItemID" runat="server"></asp:TextBox>
 
    </div> 
 
   <div> 
-      <asp:Label ID="Label3" runat="server" Text="Product ID"></asp:Label><asp:TextBox ID="txtProductId" runat="server"></asp:TextBox>
+      <asp:Label ID="Label3" runat="server" Text="Item Name"></asp:Label><asp:TextBox ID="txtItemName" runat="server"></asp:TextBox>
 
   </div>   
 
-   <div> <asp:Label ID="Label4" runat="server" Text="Quatation"></asp:Label><asp:TextBox ID="txtQuatation" runat="server"></asp:TextBox>
+   <div> <asp:Label ID="Label4" runat="server" Text="Quotation"></asp:Label><asp:TextBox ID="txtQuotation" runat="server"></asp:TextBox>
 
    </div>
 
-        <asp:Button ID="btnSubmit" runat="server" Text="Request change" OnClick="btnSubmit_Click" />
+        <asp:Button ID="btnRequestChange" runat="server" Text="Request Change" OnClick="btnRequestChange_Click" />
          </div>
 </asp:Content>
 

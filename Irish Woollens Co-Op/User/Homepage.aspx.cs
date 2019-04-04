@@ -9,6 +9,6 @@ public partial class User_Homepage : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        lblUser.Text = "Welcome  " + Session["Firstname"].ToString();
     }
 }

@@ -4,12 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data.SqlClient;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
+    SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["Key"]);
+
     protected void Page_Load(object sender, EventArgs e)
     {
-
+       
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)
@@ -23,5 +27,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         //redirect to the registeration page
         Response.Redirect("Registeration.aspx");
+    }
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+
+
+        Response.Redirect("Logout.aspx");
     }
 }

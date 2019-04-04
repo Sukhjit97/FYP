@@ -29,11 +29,13 @@
     </li>
     <li><a href="PlaceOrders.aspx">Place Orders</a>
     </li>
-    <li><a href="EditPersonalDetails.aspx">Edit Personal Details</a>
+    <li><a href="EditDetails.aspx">Edit Personal Details</a>
     </li>
     <li><a href="ViewExistingOrders.aspx">View Existing Orders</a>
     </li>
     <li><a href="Feedback.aspx">Feedback</a>
+    </li>
+    <li><a href="Help.aspx">Help</a>
     </li>
   </ul>
 
@@ -42,8 +44,13 @@
     </div>
           <div class="buttons">
               <asp:Button ID="btnLogin" runat="server" Text="Login" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" OnClick="btnLogin_Click" Width="59px" />
+              <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
               <asp:Button ID="btnRegister" runat="server" style="background-color: #FF9966; font-size: small; font-family: 'Kristen ITC';" Text="Register" OnClick="btnRegister_Click" Width="70px" />
           </div>
+        <div>
+            
+            </div>
+            
 
 
     <%--  <div class="Jumper-Images-column">

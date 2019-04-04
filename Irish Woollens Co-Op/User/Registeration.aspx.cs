@@ -19,7 +19,7 @@ public partial class Registration : System.Web.UI.Page
     protected void Register_Click(object sender, EventArgs e)
     {
         string enterPassword;
-        enterPassword = txtPassword.Text;
+        enterPassword = txtPassword.Text + txtEmailAddress.Text;
 
 
         // Create a new instance of the hash crypto service provider.

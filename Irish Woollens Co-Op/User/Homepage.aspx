@@ -124,9 +124,8 @@ img
 
 
 </style>
-</head>
-<body>
 
+    <asp:Label ID="lblUser" runat="server" Text=""></asp:Label>
 <div class="slideshow-container">
 
 <div class="mySlides fade">
