@@ -57,4 +57,9 @@ public partial class User_EditDetails : System.Web.UI.Page
             con.Close();
         }
     }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Homepage.aspx");
+    }
 }

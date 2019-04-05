@@ -15,9 +15,7 @@ public partial class User_Feedback : System.Web.UI.Page
 
 
     protected void btnSubmit_Click(object sender, EventArgs e)
-    {
-
-    
+    {  
         Response.Write("<script type='text/javascript'>alert('Thank you for your feedback!');</script>");
     }
 }

@@ -30,6 +30,10 @@
     </li>
     <li><a href="SearchItem.aspx">Search Item</a>
     </li>
+    <li><a href="Quotation.aspx">Raise a Quotation</a>
+    </li>
+    <li><a href="Help.aspx">Help</a>
+    </li>
   </ul>
 
 <div>

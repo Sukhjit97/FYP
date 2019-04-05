@@ -1,0 +1,142 @@
+﻿body {
+    background-color: white;
+}
+
+/* title of the webpage */
+
+.title {
+    grid-area: title;
+    font-size: 30px;
+    font-style: normal;
+    font-family: "Bradley Hand ITC";
+    font-weight: bold;
+    padding: 0.25em;
+    text-align: center;
+    margin-left: 22%;
+    margin-top: 4%
+}
+
+/* responsive navbar styling */
+
+ul.topnav {
+    font-family: 'Kristen ITC';
+    font-size: 13px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightpink;
+}
+    /* responsive navbar styling - CSS Flexbox */
+    ul.topnav li {
+        float: left;
+    }
+        /* responsive navbar styling */
+
+        ul.topnav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+            /* responsive navbar styling */
+
+            ul.topnav li a:hover:not(.active) {
+                background-color: white;
+                color: black;
+            }
+            /* responsive navbar styling */
+
+            ul.topnav li a.active {
+                background-color: hotpink;
+            }
+        /* responsive navbar styling - CSS Flexbox */
+
+        ul.topnav li.right {
+            float: right;
+        }
+
+.buttons {
+    margin-left: 89.6%;
+    margin-top: 7px;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+/* CSS Flexbox - styling the row for the logo and title to be placed into */
+.Logo-row {
+    display: flex;
+}
+/* Creates three equal columns that sit next to each other */
+.Logo-column {
+    padding: 10px;
+}
+
+t
+.Jummpper-Images-row {
+    display: flex;
+}
+
+
+/* Creates three equalul columns that sit next to each other */
+.Jumper-Images-co
+/* Creates three equal columns that sit next to each other */
+.Jumper-Images-column {
+    padding: 9px;
+}
+
+.footer {
+    background-color: lightpink;
+}
+
+* {
+    padding: 0;
+    text-decoration: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.socialmedia {
+    list-style-type: none;
+    text-align: center;
+}
+
+    .socialmedia a {
+        display: inline-flex;
+        width: 60px;
+        height: 60px;
+        background: #2c3e50;
+        color: white;
+        margin: 0 6px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        font-size: 24px;
+    }
+
+    .socialmedia li {
+        display: inline;
+    }
+
+    .socialmedia a:hover {
+        background: #FF69B4;
+    }
+
+    .socialmedia a i {
+        transition: 0.4s all;
+    }
+
+.footer-text {
+    font-size: 13px;
+    font-family: "Segoe UI";
+    position: relative;
+    text-align: center;
+    bottom: 10px;
+    margin-top: 8px;
+    padding-top: 11px;
+}

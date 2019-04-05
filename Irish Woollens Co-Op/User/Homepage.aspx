@@ -9,8 +9,8 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img 
 {vertical-align: middle;
- margin-left: 24%;
- margin-top: 10%;
+ margin-left: 29%;
+ margin-top: -3%;
 }
 
 /* Slideshow container */
@@ -28,7 +28,7 @@ img
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: lightgrey;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -42,7 +42,7 @@ img
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a pink background color with a little bit see-through */
+/* On hover, add a white background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: lightpink;
 }
@@ -58,17 +58,7 @@ img
   text-align: center;
 }
 
-/* Number text (1/5 etc) */
-.numbertext {
-  color: deeppink;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  margin-top:10%;
-}
-
-/* The dots/bullets/indicators */
+/* The dots/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -114,47 +104,115 @@ img
 	font-style: italic;
 	background-color:white;
 	width: 80%;
-	border: 5px solid #FF69B4;
+    border-radius: 5px;
+	border: 5px solid #d3d3d3;
 	padding: 15px;
-	margin-top: 35px;
+	margin-top: 20px;
 	margin-left: 10.5%;
 }
 
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
+.WelcomeMessage{
+    margin-left: 15px;
+    font-style: italic;
+}
+
+.footer {
+    background-color: lightpink;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.socialmedia {
+    list-style-type: none;
+    text-align: center;
+}
+
+    .socialmedia a {
+        display: inline-flex;
+        width: 60px;
+        height: 60px;
+        background: #2c3e50;
+        color: white;
+        margin: 0 6px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        font-size: 24px;
+    }
+
+    .socialmedia li {
+        display: inline;
+    }
+
+    .socialmedia a:hover {
+        background: #FF69B4;
+    }
+
+    .socialmedia a i {
+        transition: 0.4s all;
+    }
+
+.footer-text {
+    font-size: 13px;
+    font-family: "Segoe UI";
+    position: relative;
+    text-align: center;
+    bottom: 10px;
+    margin-top: 8px;
+    padding-top: 11px;
+}
 
 </style>
 
-    <asp:Label ID="lblUser" runat="server" Text=""></asp:Label>
+
+<%--Welcome Message for the User--%>
+<div class="WelcomeMessage">
+<asp:Label ID="lblUser" runat="server" Text=""></asp:Label>
+</div>
+
+
+<%-- Slideshow HTML Code--%>  
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 5</div>
-  <img src="Jumper-4.jpg" style="width:50%">
+  <img src="Jumper-4.jpg" style="width:40%">
   <div class="text">Design of Jumper</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 5</div>
-  <img src="Knitting.jpg" style="width:50%">
+  <img src="Knitting.jpg" style="width:40%">
   <div class="text">Knitting</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 5</div>
-  <img src="KnittingPins.jpg" style="width:50%">
+  <img src="KnittingPins.jpg" style="width:40%">
   <div class="text">Knitting Pins</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">4 / 5</div>
-  <img src="Pattern.jpg" style="width:50%">
+  <img src="Pattern.jpg" style="width:40%">
   <div class="text">A Knitting Pattern</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">5 / 5</div>
-  <img src="ColourfulWool.jpg" style="width:50%">
+  <img src="ColourfulWool.jpg" style="width:40%">
   <div class="text">Colourful Wool</div>
 </div>
 
@@ -171,9 +229,8 @@ img
   <span class="dot" onclick="currentSlide(4)"></span> 
   <span class="dot" onclick="currentSlide(5)"></span> 
 </div>
-
-
-<p class="description">Hello and welcome to the Showbiz Reviews website!
+    
+    <p class="description">Hello and welcome to the Showbiz Reviews website!
       <br />
       <br />This website is based on TV show reviews, where you can read and add reviews about the latest TV shows that are available to watch.
       <br />
@@ -183,6 +240,39 @@ img
       <br />
       <br />The ‘Information about TV Shows’ page is where you can use the search facility to search information about TV shows that you are interested in or are considering to watch.</p>
 
+
+    <br />
+    <br />
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="Jumper-1.jpg" alt="Jumper-1" style="width:50%">
+  </div>
+  <div class="img-container">
+  <img src="Jumper-2.jpg" alt="Jumper-2" style="width:50%">
+  </div>
+  <div class="img-container">
+  <img src="Jumper-3.jpg" alt="Jumper-3" style="width:50%">
+  </div>
+</div>
+
+    <br />
+
+         <!-- footer section of the page -->
+<hr />
+        <div class="footer">
+  <footer>
+      <ul class="socialmedia">
+		<li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+  	<li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+		<li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+	  <li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
+		</ul>
+      <div class="footer-text">
+          <p>Copyright © 2019 Irish Woollens Co-Operative | All Rights Reserved | Sukhjit Kaur</p>
+      </div>
+  </footer>
+       </div>
 
 
 

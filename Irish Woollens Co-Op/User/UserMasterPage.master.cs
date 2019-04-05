@@ -31,8 +31,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     protected void btnLogout_Click(object sender, EventArgs e)
     {
-
-
-        Response.Redirect("Logout.aspx");
+        if ((Session["Firstname"] != null) || (Session["Firstname"]!= ""))
+        {
+            Session["Firstname"] = null;
+            Session["Firstname"] = "";
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            Page.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Redirect("Default.aspx");
+        }
     }
 }

@@ -18,7 +18,7 @@
             <asp:Image ID="Logo" ImageUrl="Website-Logo.png" runat="server" Height="134px" Width="182px" />
         </div>
                   <header class="title">
-              Irish Woollens Co-Operative</header>
+              Irish Woollens Co-Operative </header>
         </div>
 
   <!-- responsive navbar -->
@@ -34,6 +34,10 @@
     <li><a href="AddNewKnitter.aspx">Add New Knitter</a>
     </li>
     <li><a href="FindStaff.aspx">Search Knitter</a>
+    </li>
+    <li><a href="QuotationInquiry.aspx">Quotation Inquiry</a>
+    </li>
+    <li><a href="Help.aspx">Help</a>
     </li>
   </ul>
 

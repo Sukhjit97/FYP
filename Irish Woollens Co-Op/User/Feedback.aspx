@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 * {
   box-sizing: border-box;
@@ -44,8 +43,6 @@ input[type=submit]:hover {
   margin: 25px;
 }
 
-
-
 .col-25 {
   float: left;
   width: 25%;
@@ -73,11 +70,14 @@ input[type=submit]:hover {
   }
 }
 
-
-
-
-
-
+        .Title{
+            align-items: center;
+            text-align: center;
+            font-family: "Bradley Hand ITC";
+            font-weight:bold;
+            font-size:25px;
+            margin-top: 20px;
+        }
 
 .footer {
     background-color: lightpink;
@@ -130,12 +130,11 @@ input[type=submit]:hover {
     padding-top: 11px;
 }
 
-
-
-
 </style>
 
-<h2>Feedback Form</h2>
+    <div class="Title">
+        Feedback Form
+    </div>
     
 <div class="container">
  <form action="/action_page.php">
@@ -211,10 +210,6 @@ input[type=submit]:hover {
       </div>
   </footer>
        </div>
-
-
-</body>
-</html> 
 
 </asp:Content>
 
