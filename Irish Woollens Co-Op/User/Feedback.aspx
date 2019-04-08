@@ -4,6 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+
 <style>
 * {
   box-sizing: border-box;
@@ -41,6 +44,8 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
   padding: 15px;
   margin: 25px;
+  margin-top: 20px;
+  border: 4px solid #d3d3d3;
 }
 
 .col-25 {
@@ -77,6 +82,7 @@ input[type=submit]:hover {
             font-weight:bold;
             font-size:25px;
             margin-top: 20px;
+            margin-left: 12%;
         }
 
 .footer {
@@ -130,11 +136,17 @@ input[type=submit]:hover {
     padding-top: 11px;
 }
 
+#div1 {
+  font-size:50px;
+  margin-left:48%;
+  margin-top: 10px;
+}
+
 </style>
 
-    <div class="Title">
-        Feedback Form
-    </div>
+    <div class="Title"> Feedback Form </div>     
+    
+    <div id="div1" class="fa"></div>
     
 <div class="container">
  <form action="/action_page.php">
@@ -210,6 +222,25 @@ input[type=submit]:hover {
       </div>
   </footer>
        </div>
+
+<script>
+function smile() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf118;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf119;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 3000);
+}
+smile();
+setInterval(smile, 4000);
+</script>
 
 </asp:Content>
 

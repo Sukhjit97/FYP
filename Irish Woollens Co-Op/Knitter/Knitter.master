@@ -8,7 +8,7 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="KnitterStyleSheet.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <%--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">--%>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -26,9 +26,9 @@
     </li>
     <li><a href="ViewCatalogue.aspx">View Catalogue</a>
     </li>
-    <li><a href="Orders.aspx">Orders</a>
+    <li><a href="Orders.aspx">My Orders</a>
     </li>
-    <li><a href="SearchItem.aspx">Search Item</a>
+    <li><a href="FindItem.aspx">Search Item</a>
     </li>
     <li><a href="Quotation.aspx">Raise a Quotation</a>
     </li>
@@ -46,7 +46,7 @@
         </div>
 
 
-      <div class="Jumper-Images-column">
+<%--      <div class="Jumper-Images-column">
           <img src="Jumper-1.jpg" />
         </div>
           <div class="Jumper-Images-column">
@@ -70,7 +70,7 @@
           <p>Copyright © 2019 Irish Woollens Co-Operative | All Rights Reserved | Sukhjit Kaur</p>
       </div>
   </footer>
-            </div>
+            </div>--%>
     </form>
 </body>
 </html>
