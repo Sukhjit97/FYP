@@ -43,9 +43,7 @@
       
     </div>
           <div class="buttons">
-              <asp:Button ID="btnLogin" runat="server" Text="Login" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" OnClick="btnLogin_Click" Width="59px" />
               <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
-              <asp:Button ID="btnRegister" runat="server" style="background-color: #FF9966; font-size: small; font-family: 'Kristen ITC';" Text="Register" OnClick="btnRegister_Click" Width="70px" />
           </div>
         <div>
             

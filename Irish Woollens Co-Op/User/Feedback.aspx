@@ -44,7 +44,7 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
   padding: 15px;
   margin: 25px;
-  margin-top: 20px;
+  margin-top: 60px;
   border: 4px solid #d3d3d3;
 }
 
@@ -206,6 +206,14 @@ input[type=submit]:hover {
     </div>
   </form>
 </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
 
  <!-- footer section of the page -->
 <hr />

@@ -23,7 +23,7 @@
 
 <!-- responsive navbar -->
   <ul class="topnav">
-    <li><a class="active" href="Homepage.aspx">Home</a>
+    <li><a class="active" href="user/Homepage.aspx">Home</a>
     </li>
     <li><a href="ViewCatalogue.aspx">View Catalogue</a>
     </li>
@@ -37,9 +37,8 @@
       
     </div>
           <div class="buttons">
-              <asp:Button ID="btnLogin" runat="server" Text="Login" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" Width="59px" />
-              <asp:Button ID="btnLogout" runat="server" Text="Logout" />
-              <asp:Button ID="btnRegister" runat="server" style="background-color: #FF9966; font-size: small; font-family: 'Kristen ITC';" Text="Register" Width="70px" />
+              <asp:Button ID="btnLogin" runat="server" Text="Login" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" Width="59px" OnClick="btnLogin_Click" />
+              <asp:Button ID="btnRegister" runat="server" style="background-color: #FF9966; font-size: small; font-family: 'Kristen ITC';" Text="Register" Width="70px" OnClick="btnRegister_Click" />
           </div>
         <div>
             

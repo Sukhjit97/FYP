@@ -55,6 +55,12 @@ public partial class Manager_AddNewKnitter : System.Web.UI.Page
 
 
     }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        //redirect back to the main page
+        Response.Redirect("Homepage.aspx");
+    }
 }
 
 
