@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Login" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LogIn.master.cs" Inherits="LogIn" %>
 
 <!DOCTYPE html>
 
@@ -11,33 +11,98 @@
 </head>
 <body>
     <form id="form1" runat="server">
-           <link href="Login.css" rel="stylesheet" />
+           <%--<link href="ManagerStyleSheet.css" rel="stylesheet" />--%>
+        <link href="CSS/User.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <div class="Logo-row">
       <div class="Logo-column">
-            <asp:Image ID="Logo" ImageUrl="Website-Logo.png" runat="server" Height="134px" Width="182px" />
-        </div>
+            <asp:Image ID="Logo" ImageUrl="images/Website-Logo.png" runat="server" Height="134px" Width="182px" />
+      </div>
                   <header class="title">
-              Irish Woollens Co-Operative</header>
+              Irish Woollens Co-Operative </header>
         </div>
+<div runat="server" visible="false" id="divManager">
+  <!-- responsive navbar -->
+  <ul class="topnav">
+    <li><a class="active" href="Homepage.aspx">Home</a>
+    </li>
+    <li><a href="ViewCatalogue.aspx">View Catalogue</a>
+    </li>
+    <li><a href="Orders.aspx">Orders</a>
+    </li>
+    <li><a href="SearchItem.aspx">Search Item</a>
+    </li>
+    <li><a href="AddNewKnitter.aspx">Add New Knitter</a>
+    </li>
+    <li><a href="FindStaff.aspx">Search Knitter</a>
+    </li>
+    <li><a href="QuotationInquiry.aspx">Quotation Inquiry</a>
+    </li>
+    <li><a href="Help.aspx">Help</a>
+    </li>
+  </ul>
+</div>
+    
         
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-            <div class ="Login">
-                <div>
-                    <asp:Label ID="lblLogin" runat="server" Text="Please login to your account in order to proceed;"></asp:Label>
-                </div>
-                <div>
-                    <asp:Label ID="lblEmailAddress" runat="server" Text="Email Address:"></asp:Label> <asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
-                </div>
-                <div>
-                    <asp:Label ID="lblPassword" runat="server" Text="Password:"></asp:Label> <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
-                </div>
-                <div style="height: 68px">
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
-                    <br />
-                </div>
-            </div>
-       
+    <div runat="server" visible="false" id="divStaff">
+        <!-- responsive navbar -->
+  <ul class="topnav">
+    <li><a class="active" href="Home.aspx">Home</a>
+    </li>
+    <li><a href="ViewCatalogue.aspx">View Catalogue</a>
+    </li>
+    <li><a href="Orders.aspx">My Orders</a>
+    </li>
+    <li><a href="FindItem.aspx">Search Item</a>
+    </li>
+    <li><a href="Quotation.aspx">Raise a Quotation</a>
+    </li>
+    <li><a href="Help.aspx">Help</a>
+    </li>
+  </ul>  
+    </div>
+
+     <div runat="server" visible="false" id="divCustomer">
+
+         <!-- responsive navbar -->
+  <ul class="topnav">
+    <li><a class="active" href="Homepage.aspx">Home</a>
+    </li>
+    <li><a href="ViewCatalogue.aspx">View Catalogue</a>
+    </li>
+    <li><a href="PlaceOrders.aspx">Place Orders</a>
+    </li>
+    <li><a href="EditDetails.aspx">Edit Personal Details</a>
+    </li>
+    <li><a href="ViewExistingOrders.aspx">View Existing Orders</a>
+    </li>
+    <li><a href="Feedback.aspx">Feedback</a>
+    </li>
+    <li><a href="Help.aspx">Help</a>
+    </li>
+  </ul>
+
+     </div>
+
+
+
+          <div class="buttons">
+              <asp:Button ID="btnLogout" runat="server" Text="Logout" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" Width="59px"  />
+          </div>
+
+
+   
+              <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
         </asp:ContentPlaceHolder>
+      
+
+
+        <div>
+        </div>
+
+
+         
     </form>
 </body>
 </html>

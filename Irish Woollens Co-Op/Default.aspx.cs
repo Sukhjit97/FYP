@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Manager_Default : System.Web.UI.Page
+public partial class _Default : System.Web.UI.Page
 {
     SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["Key"]);
 
@@ -17,9 +17,10 @@ public partial class Manager_Default : System.Web.UI.Page
 
     }
 
-    protected void Login_Click(object sender, EventArgs e)
+    
+    protected void buttonLogin_Click(object sender, EventArgs e)
     {
-        string enteredPassword = txtPassword.Text;
+        string enteredPassword = txtPassword.Text + txtEmailAddress.Text;
 
         // Create a new instance of the hash crypto service provider.
         HashAlgorithm hashAlg = new SHA256CryptoServiceProvider();
@@ -35,18 +36,22 @@ public partial class Manager_Default : System.Web.UI.Page
 
 
         con.Open();
-        string qry = "select * from tblManager where EmailAddress='" + txtEmailAddress.Text + "' and Password='" + hashedPassword + "'";
+        string qry = "select * from tblCustomer where EmailAddress='" + txtEmailAddress.Text + "' and Password='" + hashedPassword + "'";
         SqlCommand cmd = new SqlCommand(qry, con);
         SqlDataReader dr = cmd.ExecuteReader();
         if (dr.Read())
         {
+            Session["CustomerID"] = dr["CustomerID"].ToString();
+            Session["Firstname"] = dr["Firstname"].ToString();
+            Session["uid"] = dr["CustomerID"].ToString();
+            Session["RoleId"] = dr["RoleId"].ToString();
 
-            Response.Redirect("Registration.aspx");
+            Response.Redirect("Homepage.aspx");
 
         }
         else
         {
-            Response.Write("<script type='text/javascript'>alert('Invalid Email Address or Password..!');</script>");
+            Response.Write("<script type='text/javascript'>alert('You have entered an invalid Email Address or Password');</script>");
         }
 
         con.Close();

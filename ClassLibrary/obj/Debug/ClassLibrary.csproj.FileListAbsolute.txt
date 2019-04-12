@@ -12,7 +12,6 @@ C:\Users\Sukhi_000\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\Class
 C:\Users\Sukhi_000\Desktop\FYP\Irish Woollens Co-Op\ClassLibrary\obj\Debug\ClassLibrary.pdb
 H:\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\bin\Debug\ClassLibrary.dll
 H:\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\bin\Debug\ClassLibrary.pdb
-H:\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
 H:\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 H:\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\ClassLibrary.dll
 H:\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\ClassLibrary.pdb
@@ -22,3 +21,4 @@ C:\Users\Sukhi_000\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\Class
 C:\Users\Sukhi_000\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Sukhi_000\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\Sukhi_000\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\Desktop\FYP\Irish-Woollens-Co-Op\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache

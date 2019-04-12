@@ -34,7 +34,7 @@ public partial class Registration : System.Web.UI.Page
 
         con.Open();
 
-        String qry = "insert into tblCustomer(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber)values('" + txtAddress.Text + "','" + txtEmailAddress.Text + "','" + txtFirstname.Text + "','" + txtSurname.Text + "','" + hashedPassword + "','" + txtTelephoneNumber.Text + "')";
+        String qry = "insert into tblCustomer(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId)values('" + txtAddress.Text + "','" + txtEmailAddress.Text + "','" + txtFirstname.Text + "','" + txtSurname.Text + "','" + hashedPassword + "','" + txtTelephoneNumber.Text + "', '" + 3 + "')";
 
         SqlCommand cmd = new SqlCommand(qry, con);
         cmd.ExecuteNonQuery();

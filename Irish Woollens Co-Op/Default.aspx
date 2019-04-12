@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Manager_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Web.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
     <asp:Label ID="Label1" runat="server" Text="Email Address:"></asp:Label>
     <asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
 
@@ -15,6 +14,6 @@
 
 
 
-    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="Login_Click" />
+    <asp:Button ID="buttonLogin" runat="server" OnClick="buttonLogin_Click" Text="Login" />
 </asp:Content>
 

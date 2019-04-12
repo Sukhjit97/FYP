@@ -1,186 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="User.master" AutoEventWireup="true" CodeFile="Homepage.aspx.cs" Inherits="User_Homepage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LogIn.master" AutoEventWireup="true" CodeFile="Homepage.aspx.cs" Inherits="homepage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img 
-{vertical-align: middle;
- margin-left: 29%;
- margin-top: -3%;
-}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: lightgrey;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a white background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: lightpink;
-}
-
-/* Caption text */
-.text {
-  color: deeppink;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* The dots/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
-.description {
-	align-items: center;
-	text-align: center;
-	font-family: "segoe ui";
-	font-style: italic;
-	background-color:white;
-	width: 80%;
-    border-radius: 5px;
-	border: 5px solid #d3d3d3;
-	padding: 15px;
-	margin-top: 20px;
-	margin-left: 10.5%;
-}
-
-.img-container {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.WelcomeMessage{
-    margin-left: 15px;
-    font-style: italic;
-}
-
-.footer {
-    background-color: lightpink;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-
-.socialmedia {
-    list-style-type: none;
-    text-align: center;
-}
-
-    .socialmedia a {
-        display: inline-flex;
-        width: 60px;
-        height: 60px;
-        background: #2c3e50;
-        color: white;
-        margin: 0 6px;
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-        transition: 0.4s;
-        font-size: 24px;
-    }
-
-    .socialmedia li {
-        display: inline;
-    }
-
-    .socialmedia a:hover {
-        background: #FF69B4;
-    }
-
-    .socialmedia a i {
-        transition: 0.4s all;
-    }
-
-.footer-text {
-    font-size: 13px;
-    font-family: "Segoe UI";
-    position: relative;
-    text-align: center;
-    bottom: 10px;
-    margin-top: 8px;
-    padding-top: 11px;
-}
-
-</style>
-
+    <link href="CSS/Styling.css" rel="stylesheet" />
 
 <%--Welcome Message for the User--%>
 <div class="WelcomeMessage">
@@ -192,27 +16,27 @@ img
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <img src="Jumper-4.jpg" style="width:40%">
+  <img src="images/Jumper-4.jpg" style="width:40%">
   <div class="text">Design of Jumper</div>
 </div>
 
 <div class="mySlides fade">
-  <img src="Knitting.jpg" style="width:40%">
+  <img src="images/Knitting.jpg" style="width:40%">
   <div class="text">Knitting</div>
 </div>
 
 <div class="mySlides fade">
-  <img src="KnittingPins.jpg" style="width:40%">
+  <img src="images/KnittingPins.jpg" style="width:40%">
   <div class="text">Knitting Pins</div>
 </div>
 
 <div class="mySlides fade">
-  <img src="Pattern.jpg" style="width:40%">
+  <img src="images/Pattern.jpg" style="width:40%">
   <div class="text">A Knitting Pattern</div>
 </div>
 
 <div class="mySlides fade">
-  <img src="ColourfulWool.jpg" style="width:40%">
+  <img src="images/ColourfulWool.jpg" style="width:40%">
   <div class="text">Colourful Wool</div>
 </div>
 
@@ -246,13 +70,13 @@ img
 
 <div class="clearfix">
   <div class="img-container">
-  <img src="Jumper-1.jpg" alt="Jumper-1" style="width:50%">
+  <img src="images/Jumper-1.jpg" alt="Jumper-1" style="width:50%">
   </div>
   <div class="img-container">
-  <img src="Jumper-2.jpg" alt="Jumper-2" style="width:50%">
+  <img src="images/Jumper-2.jpg" alt="Jumper-2" style="width:50%">
   </div>
   <div class="img-container">
-  <img src="Jumper-3.jpg" alt="Jumper-3" style="width:50%">
+  <img src="images/Jumper-3.jpg" alt="Jumper-3" style="width:50%">
   </div>
 </div>
 
