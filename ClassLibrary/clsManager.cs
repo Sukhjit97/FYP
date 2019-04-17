@@ -14,8 +14,6 @@ namespace ClassLibrary
         private string mFirstname;
         //private data member for Surname
         private string mSurname;
-        //private data member for Password
-        private string mPassword;
         //private data member for TelephoneNumber
         private string mTelephoneNumber;
 
@@ -95,21 +93,6 @@ namespace ClassLibrary
             }
         }
 
-        //public property for password
-        public string Password
-        {
-            get
-            {
-                //return the private data 
-                return mPassword;
-            }
-            set
-            {
-                //set the private data 
-                mPassword = value;
-            }
-        }
-
         //public property for TelephoneNumber
         public string TelephoneNumber
         {
@@ -172,18 +155,7 @@ namespace ClassLibrary
             {
                 //retrun an error message
                 Error = "The surname field may not be blank!";
-            }
-            //if the password field is more than 16 characters
-            if (Password.Length > 16)
-            {
-                //return an error message
-                Error = "The password field cannot have more than 16 characters";
-            }
-            if (Password.Length == 0)
-            {
-                //retrun an error message
-                Error = "The password field may not be blank!";
-            }
+            }           
             //if the telephone number field is more than 11 characters
             if (TelephoneNumber.Length > 11)
             {
@@ -216,7 +188,6 @@ namespace ClassLibrary
                 mEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
                 mFirstname = Convert.ToString(DB.DataTable.Rows[0]["Firstname"]);
                 mSurname = Convert.ToString(DB.DataTable.Rows[0]["Surname"]);
-                mPassword = Convert.ToString(DB.DataTable.Rows[0]["Password"]);
                 mTelephoneNumber = Convert.ToString(DB.DataTable.Rows[0]["TelephoneNumber"]);
                 //return that everything worked OK
                 return true;

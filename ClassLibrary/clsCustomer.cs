@@ -6,12 +6,8 @@ namespace ClassLibrary
     {
         //private data member for the CustomerID property
         private Int32 mCustomerID;
-        //private data member for Active
-        private Boolean mActive;
         //private data member for the Address
         private string mAddress;
-        //private data member for Date Registered
-        private DateTime mDateRegistered;
         //private data member for Email Address
         private string mEmailAddress;
         //private data member for Firstname
@@ -22,22 +18,9 @@ namespace ClassLibrary
         private string mPassword;
         //private data member for TelephoneNumber
         private string mTelephoneNumber;
+        //private int member for RoleId
+        private int mRoleId;
 
-
-        //public property for active
-        public bool Active
-        {
-            get
-            {
-                //return the private data 
-                return mActive;
-            }
-            set
-            {
-                //set the private data 
-                mActive = value;
-            }
-        }
 
         //public property for address
         public string Address
@@ -66,21 +49,6 @@ namespace ClassLibrary
             {
                 //set the value of the private data member
                 mCustomerID = value;
-            }
-        }
-
-        //public property for date registered
-        public DateTime DateRegistered
-        {
-            get
-            {
-                //return the private data 
-                return mDateRegistered;
-            }
-            set
-            {
-                //set the private data
-                mDateRegistered = value;
             }
         }
 
@@ -144,6 +112,21 @@ namespace ClassLibrary
             }
         }
 
+        //public property for roleid
+        public int RoleId
+        {
+            get
+            {
+                //return the private data 
+                return mRoleId;
+            }
+            set
+            {
+                //set the private data 
+                mRoleId = value;
+            }
+        }
+
         //public property for TelephoneNumber
         public string TelephoneNumber
         {
@@ -159,98 +142,75 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(string Address, string DateRegistered, string EmailAddress, string Firstname, string Surname, string Password, string TelephoneNumber)
+        public string Valid(string Address, string EmailAddress, string Firstname, string Surname, string Password, string TelephoneNumber, string RoleId)
         {
             //string variable to store the error message
-            string Error = "";
-            //create a temporary vairable to store date values
-            DateTime DateTemp;
+            String Error = "";
             //if the address field is more than 50 characters 
             if (Address.Length > 50)
             {
                 //return an error message
-                Error = "The address field cannot have more than 50 characters";
+                Error = Error + "The address field cannot have more than 50 characters";
             }
             if (Address.Length == 0)
             {
                 //retrun an error message
-                Error = "The address field may not be blank!";
+                Error = Error + "The address field may not be blank!";
             }
-            try
-            {
-                //copy the DateRegistered value to the DateTemp variable
-                DateTemp = Convert.ToDateTime(DateRegistered);
-                if (DateTemp < DateTime.Now.Date)
-                {
-                    //record the error
-                    Error = Error + "The date cannot be in the past : ";
-                }
-                //check the see if the date is greater than today's date
-                if (DateTemp > DateTime.Now.Date)
-                {
-                    //record the error
-                    Error = Error + "The date cannot be in the future : ";
-                }
-            }
-            catch
-            {
-                //record the error
-                Error = Error + "The date was not a valid date : ";
-
-            }
+            
             if (EmailAddress.Length > 50)
             {
                 //return an error message
-                Error = "The email address field cannot have more than 50 characters";
+                Error = Error + "The email address field cannot have more than 50 characters";
             }
             if (EmailAddress.Length == 0)
             {
                 //retrun an error message
-                Error = "The email address field may not be blank!";
+                Error = Error + "The email address field may not be blank!";
             }
             //if the firstname field is more than 50 characters
             if (Firstname.Length > 50)
             {
                 //return an error message
-                Error = "The firstname field cannot have more than 50 characters";
+                Error = Error + "The firstname field cannot have more than 50 characters";
             }
             if (Firstname.Length == 0)
             {
                 //retrun an error message
-                Error = "The firstname field may not be blank!";
+                Error = Error + "The firstname field may not be blank!";
             }
             //if the surname field is more than 50 characters
             if (Surname.Length > 50)
             {
                 //return an error message
-                Error = "The surname field cannot have more than 50 characters";
+                Error = Error + "The surname field cannot have more than 50 characters";
             }
             if (Surname.Length == 0)
             {
                 //retrun an error message
-                Error = "The surname field may not be blank!";
+                Error = Error + "The surname field may not be blank!";
             }
             //if the password field is more than 16 characters
             if (Password.Length > 16)
             {
                 //return an error message
-                Error = "The password field cannot have more than 16 characters";
+                Error = Error + "The password field cannot have more than 16 characters";
             }
             if (Password.Length == 0)
             {
                 //retrun an error message
-                Error = "The password field may not be blank!";
+                Error = Error + "The password field may not be blank!";
             }
             //if the telephone number field is more than 11 characters
             if (TelephoneNumber.Length > 11)
             {
                 //return an error message
-                Error = "The telephone number field cannot have more than 11 characters";
+                Error = Error + "The telephone number field cannot have more than 11 characters";
             }
             if (TelephoneNumber.Length == 0)
             {
                 //retrun an error message
-                Error = "The telephone number field may not be blank!";
+                Error = Error + "The telephone number field may not be blank!";
             }
             //return any error messages
             return Error;
@@ -269,9 +229,7 @@ namespace ClassLibrary
             {
                 //copy the data from the database to the private data members 
                 mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
-                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 mAddress = Convert.ToString(DB.DataTable.Rows[0]["Address"]);
-                mDateRegistered = Convert.ToDateTime(DB.DataTable.Rows[0]["DateRegistered"]);
                 mEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
                 mFirstname = Convert.ToString(DB.DataTable.Rows[0]["Firstname"]);
                 mSurname = Convert.ToString(DB.DataTable.Rows[0]["Surname"]);

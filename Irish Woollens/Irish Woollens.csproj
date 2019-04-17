@@ -112,7 +112,9 @@
     <Content Include="QuotationInquiry.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="SearchAllocatedOrders.aspx" />
+    <Content Include="SearchKnitter.aspx" />
     <Content Include="SearchOrders.aspx" />
+    <Content Include="StaffEditDetails.aspx" />
     <Content Include="ViewCatalogue.aspx" />
     <Content Include="ViewCatalogueWeb.aspx" />
     <Content Include="Web.config" />
@@ -239,12 +241,26 @@
     <Compile Include="SearchAllocatedOrders.aspx.designer.cs">
       <DependentUpon>SearchAllocatedOrders.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SearchKnitter.aspx.cs">
+      <DependentUpon>SearchKnitter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchKnitter.aspx.designer.cs">
+      <DependentUpon>SearchKnitter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SearchOrders.aspx.cs">
       <DependentUpon>SearchOrders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SearchOrders.aspx.designer.cs">
       <DependentUpon>SearchOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffEditDetails.aspx.cs">
+      <DependentUpon>StaffEditDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffEditDetails.aspx.designer.cs">
+      <DependentUpon>StaffEditDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewCatalogue.aspx.cs">
       <DependentUpon>ViewCatalogue.aspx</DependentUpon>

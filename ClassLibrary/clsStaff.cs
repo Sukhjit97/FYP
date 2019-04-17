@@ -18,6 +18,9 @@ namespace ClassLibrary
         private string mPassword;
         //private data member for TelephoneNumber
         private string mTelephoneNumber;
+        //private int member for RoleId
+        private int mRoleId;
+
 
 
         //public property for the staff id
@@ -95,7 +98,7 @@ namespace ClassLibrary
             }
         }
 
-        //public property for password
+        //public property for surname
         public string Password
         {
             get
@@ -125,7 +128,22 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(string Address, string EmailAddress, string Firstname, string Surname, string Password, string TelephoneNumber)
+        //public property for roleid
+        public int RoleId
+        {
+            get
+            {
+                //return the private data 
+                return mRoleId;
+            }
+            set
+            {
+                //set the private data 
+                mRoleId = value;
+            }
+        }
+
+        public string Valid(string Address, string EmailAddress, string Firstname, string Surname, string Password, string TelephoneNumber, string RoleId)
         {
             //string variable to store the error message
             string Error = "";
@@ -133,67 +151,67 @@ namespace ClassLibrary
             if (Address.Length > 50)
             {
                 //return an error message
-                Error = "The address field cannot have more than 50 characters";
+                Error = Error + "The address field cannot have more than 50 characters";
             }
             if (Address.Length == 0)
             {
                 //retrun an error message
-                Error = "The address field may not be blank!";
+                Error = Error + "The address field may not be blank!";
             }
             //if the email address field is more than 50 characters
             if (EmailAddress.Length > 50)
             {
                 //return an error message
-                Error = "The email address field cannot have more than 50 characters";
+                Error = Error + "The email address field cannot have more than 50 characters";
             }
             if (EmailAddress.Length == 0)
             {
                 //retrun an error message
-                Error = "The email address field may not be blank!";
+                Error = Error + "The email address field may not be blank!";
             }
             //if the firstname field is more than 50 characters
             if (Firstname.Length > 50)
             {
                 //return an error message
-                Error = "The firstname field cannot have more than 50 characters";
+                Error = Error + "The firstname field cannot have more than 50 characters";
             }
             if (Firstname.Length == 0)
             {
                 //retrun an error message
-                Error = "The firstname field may not be blank!";
+                Error = Error + "The firstname field may not be blank!";
             }       
             //if the surname field is more than 50 characters
             if (Surname.Length > 50)
             {
                 //return an error message
-                Error = "The surname field cannot have more than 50 characters";
+                Error = Error + "The surname field cannot have more than 50 characters";
             }
             if (Surname.Length == 0)
             {
                 //retrun an error message
-                Error = "The surname field may not be blank!";
+                Error = Error + "The surname field may not be blank!";
             }
             //if the password field is more than 16 characters
-            if (Password.Length > 16)
+            if (Password.Length > 50)
             {
                 //return an error message
-                Error = "The password field cannot have more than 16 characters";
+                Error = Error + "The password field cannot have more than 16 characters";
             }
             if (Password.Length == 0)
             {
                 //retrun an error message
-                Error = "The password field may not be blank!";
+                Error = Error + "The password field may not be blank!";
             }
             //if the telephone number field is more than 11 characters
             if (TelephoneNumber.Length > 11)
             {
                 //return an error message
-                Error = "The telephone number field cannot have more than 11 characters";
+                Error = Error + "The telephone number field cannot have more than 11 characters";
             }
             if (TelephoneNumber.Length == 0)
             {
                 //retrun an error message
-                Error = "The telephone number field may not be blank!";
+                Error = Error + "The telephone number field may not be blank!";
             }
             //return any error messages
             return Error;
@@ -216,7 +234,6 @@ namespace ClassLibrary
                 mEmailAddress = Convert.ToString(DB.DataTable.Rows[0]["EmailAddress"]);
                 mFirstname = Convert.ToString(DB.DataTable.Rows[0]["Firstname"]);
                 mSurname = Convert.ToString(DB.DataTable.Rows[0]["Surname"]);
-                mPassword = Convert.ToString(DB.DataTable.Rows[0]["Password"]);
                 mTelephoneNumber = Convert.ToString(DB.DataTable.Rows[0]["TelephoneNumber"]);
                 //return that everything worked OK
                 return true;

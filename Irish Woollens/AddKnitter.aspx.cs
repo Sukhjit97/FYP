@@ -23,6 +23,16 @@ namespace Irish_Woollens
         //function for adding new records
         void Add()
         {
+            clsStaffCollection StaffList = new clsStaffCollection();
+            String Error = StaffList.ThisStaff.Valid(txtAddress.Text,
+                                                           txtEmailAddress.Text,
+                                                           txtFirstname.Text,
+                                                           txtSurname.Text,
+                                                           txtPassword.Text,
+                                                           txtTelephoneNumber.Text,
+                                                           txtRole.Text);
+
+
             string enterPassword;
             enterPassword = txtPassword.Text + txtEmailAddress.Text;
 
@@ -37,38 +47,58 @@ namespace Irish_Woollens
             // -->if you need to display the value or transmit it over a network.
             string hashedPassword = Convert.ToBase64String(bytHash);
 
-            con.Open();
+            if (Error == "")
+            {
+                StaffList.ThisStaff.Firstname = txtFirstname.Text;
+                StaffList.ThisStaff.Surname = txtSurname.Text;
+                StaffList.ThisStaff.Address = txtAddress.Text;
+                StaffList.ThisStaff.EmailAddress = txtEmailAddress.Text;
+                StaffList.ThisStaff.Password = hashedPassword;
+                StaffList.ThisStaff.TelephoneNumber = txtTelephoneNumber.Text;
+                StaffList.ThisStaff.RoleId = 2;
 
-            String qry = "insert into tblStaff(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId)values('" + txtAddress.Text + "','" + txtEmailAddress.Text + "','" + txtFirstname.Text + "','" + txtSurname.Text + "','" + hashedPassword + "','" + txtTelephoneNumber.Text + "', '" + 2 + "')";
-
-            SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.ExecuteNonQuery();
-            Response.Write("<script type='text/javascript'>alert('You have successfully added a new staff..!');</script>");
-            //Response.Redirect("homepage.aspx");
-            con.Close();
-            ClearInputs(Page.Controls);
+                //Add the record
+                StaffList.Add();
+                lblError.Text = "Knitter added successfully";
+            }
+            else
+            {
+                //report
+                lblError.Text = "There were problem(s) with the data you entered: " + Error;
+            }
         }
 
-        protected void btnAddKnitter_Click(object sender, EventArgs e)
+            protected void btnAddKnitter_Click(object sender, EventArgs e)
         {
             //add the new record
             Add();
-
+            //javascript message to show to the manager when they have added a new knitter successfully 
             //Response.Write("<script type='text/javascript'>alert('You have successfully added a new knitter to the system');</script>");
+            //ClearTextBoxes(Page);
         }
 
-        private void ClearInputs(ControlCollection ctrls)
-        {
-            foreach (Control ctrl in ctrls)
-            {
-                if (ctrl is TextBox)
-                    ((TextBox)ctrl).Text = string.Empty;
-                else if (ctrl is DropDownList)
-                    ((DropDownList)ctrl).ClearSelection();
+        //protected void ClearTextBoxes(Control p1)
+        //{
+        //    foreach (Control ctrl in p1.Controls)
+        //    {
+        //        if (ctrl is TextBox)
+        //        {
+        //            TextBox t = ctrl as TextBox;
 
-                ClearInputs(ctrl.Controls);
-            }
-        }
+        //            if (t != null)
+        //            {
+        //                t.Text = String.Empty;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            if (ctrl.Controls.Count > 0)
+        //            {
+        //                ClearTextBoxes(ctrl);
+        //            }
+        //        }
+        //    }
+        //}
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {

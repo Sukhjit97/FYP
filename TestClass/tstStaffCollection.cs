@@ -33,9 +33,9 @@ namespace TestClass
             TestItem.StaffID = 5;
             TestItem.EmailAddress = "Some@hotmail.co.uk";
             TestItem.Firstname = "Hind";
-            TestItem.Password = "Town";
             TestItem.Surname = "Sink";
             TestItem.TelephoneNumber = "01164534587";
+            TestItem.Password = "Hello123!";
             //add the item to the list
             TestList.Add(TestItem);
             //assign the data to the property 
@@ -56,8 +56,8 @@ namespace TestClass
             TestStaff.StaffID = 6;
             TestStaff.EmailAddress = "Some@hotmail.co.uk";
             TestStaff.Firstname = "Hind";
-            TestStaff.Password = "Town";
             TestStaff.Surname = "Sink";
+            TestStaff.Password = "Hello123!";
             TestStaff.TelephoneNumber = "01164534587";
             //assign the data to the property 
             AllStaff.ThisStaff = TestStaff;
@@ -81,8 +81,8 @@ namespace TestClass
             TestItem.StaffID = 6;
             TestItem.EmailAddress = "Some@hotmail.co.uk";
             TestItem.Firstname = "Hind";
-            TestItem.Password = "Town";
             TestItem.Surname = "Sink";
+            TestItem.Password = "Hello123!";
             TestItem.TelephoneNumber = "01164534587";
             //add the item to the list
             TestList.Add(TestItem);
@@ -107,7 +107,7 @@ namespace TestClass
             TestItem.EmailAddress = "Some@hotmail.co.uk";
             TestItem.Firstname = "Hind";
             TestItem.Surname = "Sink";
-            TestItem.Password = "Town";
+            TestItem.Password = "Hello123!";
             TestItem.TelephoneNumber = "01164534587";
             //set ThisStaff to the test data
             AllStaff.ThisStaff = TestItem;

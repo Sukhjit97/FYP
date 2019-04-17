@@ -22,12 +22,7 @@
         height: 190px;
     }
 
-
     </style>
-
-
-
-
 
 
 <%--Welcome Message for the User--%>
@@ -128,6 +123,8 @@
 
 
 <script>
+
+//image gallery
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -153,7 +150,6 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-}
+    }
 </script>
 </asp:Content>
-

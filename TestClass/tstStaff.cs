@@ -82,19 +82,6 @@ namespace TestClass
         }
 
         [TestMethod]
-        public void PasswordOk()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create some test data to assign to the property 
-            String Password = "Samsung";
-            //assign the data to the property
-            AStaff.Password = Password;
-            //test to see that the two values are the same
-            Assert.AreEqual(AStaff.Password, Password);
-        }
-
-        [TestMethod]
         public void TelephoneNumberOk()
         {
             //create an instance of the class we want to create
@@ -772,167 +759,6 @@ namespace TestClass
         }
 
         [TestMethod]
-        public void PasswordMinLessOne()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create a string variable to store the result of the validation
-            string Error = "";
-            //create some test data to test the method
-            string Address = "55 London Road";
-            string EmailAddress = "Kerry.Smith@hotmail.co.uk";
-            string Firstname = "Kerry";
-            string Surname = "Smith";
-            string Password = ""; //this should trigger an error
-            string TelephoneNumber = "01169876543";
-            //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PasswordMinBoundary()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create a string variable to store the result of the validation
-            string Error = "";
-            //create some test data to test the method
-            string Address = "55 London Road";
-            string EmailAddress = "Kerry.Smith@hotmail.co.uk";
-            string Firstname = "Kerry";
-            string Surname = "Smith";
-            string Password = "l"; //this should be ok
-            string TelephoneNumber = "01169876543";
-            //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PasswordMinPlusOne()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create a string variable to store the result of the validation
-            string Error = "";
-            //create some test data to test the method
-            string Address = "55 London Road";
-            string EmailAddress = "Kerry.Smith@hotmail.co.uk";
-            string Firstname = "Kerry";
-            string Surname = "Smith";
-            string Password = "ll"; //this should be ok
-            string TelephoneNumber = "01169876543";
-            //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PasswordMaxLessOne()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create a string variable to store the result of the validation
-            string Error = "";
-            //create some test data to test the method
-            string Address = "55 London Road";
-            string EmailAddress = "Kerry.Smith@hotmail.co.uk";
-            string Firstname = "Kerry";
-            string Surname = "Smith";
-            string Password = "lllllllllllllll"; //this should be ok
-            string TelephoneNumber = "01169876543";
-            //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PasswordMaxBoundary()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create a string variable to store the result of the validation
-            string Error = "";
-            //create some test data to test the method
-            string Address = "55 London Road";
-            string EmailAddress = "Kerry.Smith@hotmail.co.uk";
-            string Firstname = "Kerry";
-            string Surname = "Smith";
-            string Password = "llllllllllllllll"; //this should be ok
-            string TelephoneNumber = "01169876543";
-            //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PasswordMaxPlusOne()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create a string variable to store the result of the validation
-            string Error = "";
-            //create some test data to test the method
-            string Address = "55 London Road";
-            string EmailAddress = "Kerry.Smith@hotmail.co.uk";
-            string Firstname = "Kerry";
-            string Surname = "Smith";
-            string Password = "lllllllllllllllll"; //this should trigger an error
-            string TelephoneNumber = "01169876543";
-            //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PasswordMid()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create a string variable to store the result of the validation
-            string Error = "";
-            //create some test data to test the method
-            string Address = "55 London Road";
-            string EmailAddress = "Kerry.Smith@hotmail.co.uk";
-            string Firstname = "Kerry";
-            string Surname = "Smith";
-            string Password = "llllllll"; //this should be ok
-            string TelephoneNumber = "01169876543";
-            //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PasswordExtremeMax()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //create a string variable to store the result of the validation
-            string Error = "";
-            //create some test data to test the method
-            string Address = "55 London Road";
-            string EmailAddress = "Kerry.Smith@hotmail.co.uk";
-            string Firstname = "Kerry";
-            string Surname = "Smith";
-            string Password = ""; //this should trigger an error
-            Password = Password.PadRight(500, 'l');
-            string TelephoneNumber = "01169876543";
-            //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
         public void TelephoneNumberMinLessOne()
         {
             //create an instance of the class we want to create
@@ -1101,7 +927,7 @@ namespace TestClass
             //boolen variable to store the result of the validation 
             Boolean Found = false;
             //create some test data to use with the method 
-            Int32 StaffID = 1;
+            Int32 StaffID = 21;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //test to see that the result is correct
@@ -1118,11 +944,11 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 StaffID = 3;
+            Int32 StaffID = 21;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the staff id
-            if (AStaff.StaffID != 3)
+            if (AStaff.StaffID != 21)
             {
                 OK = false;
             }
@@ -1140,11 +966,11 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 StaffID = 3;
+            Int32 StaffID = 21;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the property
-            if (AStaff.Address != "1 Globe Road")
+            if (AStaff.Address != "8 Nursery Street, Winterfell")
             {
                 OK = false;
             }
@@ -1162,11 +988,11 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 StaffID = 3;
+            Int32 StaffID = 21;
             //invoke the method
             Found = AStaff.Find(StaffID);          
             //check the property
-            if (AStaff.EmailAddress != "HelloJazz@outlook.co.uk")
+            if (AStaff.EmailAddress != "staff@staff.com")
             {
                 OK = false;
             }
@@ -1184,11 +1010,11 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 StaffID = 3;
+            Int32 StaffID = 21;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the property
-            if (AStaff.Firstname != "Jazz")
+            if (AStaff.Firstname != "Sanza")
             {
                 OK = false;
             }
@@ -1206,33 +1032,11 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 StaffID = 3;
+            Int32 StaffID = 21;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the property
-            if (AStaff.Surname != "Kaur")
-            {
-                OK = false;
-            }
-            //test to see that the result is correct
-            Assert.IsTrue(OK);
-        }
-
-        [TestMethod]
-        public void TestPasswordFound()
-        {
-            //create an instance of the class we want to create
-            clsStaff AStaff = new clsStaff();
-            //boolean variable to store the result of the search 
-            Boolean Found = false;
-            //boolean variable to record if data is OK (assume it is)
-            Boolean OK = true;
-            //create some test data to use with the method 
-            Int32 StaffID = 3;
-            //invoke the method
-            Found = AStaff.Find(StaffID);
-            //check the property
-            if (AStaff.Password != "123Stars!")
+            if (AStaff.Surname != "Stark")
             {
                 OK = false;
             }
@@ -1250,11 +1054,11 @@ namespace TestClass
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method 
-            Int32 StaffID = 3;
+            Int32 StaffID = 21;
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the property
-            if (AStaff.TelephoneNumber != "01151234345")
+            if (AStaff.TelephoneNumber != "15647895234")
             {
                 OK = false;
             }

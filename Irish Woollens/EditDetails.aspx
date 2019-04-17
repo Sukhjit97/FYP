@@ -12,6 +12,12 @@
     <p class="Description">
         Please use the below prefilled form to amend any of your personal details;
     </p>
+    <p class="Description">
+        When updating your personal details, please also make sure that you type in your password in the password field to update your details. If you dont do this, your details will not get updated.
+    </p>
+    <br />
+    <br />
+
 
        <div class="UpdateDetails"
            style="height: 357px">
@@ -56,7 +62,7 @@
   <asp:Label ID="Label5" runat="server" Text="Password:" CssClass="auto-style2"></asp:Label>
     
     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-    <asp:requiredfieldvalidator runat="server" errormessage="*" ControlToValidate="txtPassword" CssClass="auto-style3" style="color: #FF0000"></asp:requiredfieldvalidator>
+    <asp:requiredfieldvalidator runat="server" errormessage="Required Field" ControlToValidate="txtPassword" CssClass="auto-style3" style="color: #FF0000"></asp:requiredfieldvalidator>
     <br />
     <br />
 </div>
@@ -66,7 +72,7 @@
     <asp:Label ID="Label6" runat="server" Text="Confirm Password:" CssClass="auto-style2"></asp:Label>
     
     <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
-            <asp:CompareValidator ID="lblConfirmPassword" runat="server" ControlToValidate="txtPassword" ControlToCompare="txtConfirmPassword" ErrorMessage="Passwords must match"></asp:CompareValidator>
+            <asp:CompareValidator ID="lblConfirmPassword" runat="server" ControlToValidate="txtPassword" ControlToCompare="txtConfirmPassword" ErrorMessage="Passwords must match" style="color: #FF0000"></asp:CompareValidator>
             <br />
             <br />
         </div>
@@ -82,8 +88,6 @@
 
             <div>
     <asp:Button ID="btnEditDetails" runat="server" Text="Update Details" style="height: 26px" OnClick="btnEditDetails_Click" />
-
-    <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click"/>
 </div>
 </div>
 
@@ -92,6 +96,9 @@
 
     <br />
     <br />
+    <br />
+    <br />
+
 
 
      <!-- footer section of the page -->
@@ -110,8 +117,5 @@
   </footer>
        </div>
 
-
-    
-    </div>
 </asp:Content>
 

@@ -38,12 +38,6 @@
 }
     </style>
 
-
-
-
-
-
-
         <div class="Title">
         Registration
     </div>
@@ -53,7 +47,7 @@
     </p>
 
        <div class="Registration"
-           style="height: 377px">
+           style="height: 500px">
 
         <div>
             <asp:Label ID="Label1" runat="server" Text="Firstname:" CssClass="auto-style2"></asp:Label>
@@ -61,8 +55,7 @@
     <asp:TextBox ID="txtFirstname" runat="server"></asp:TextBox>
             <asp:requiredfieldvalidator runat="server" errormessage="Please enter firstname" ControlToValidate="txtFirstname" CssClass="auto-style3" style="color: #FF0000"></asp:requiredfieldvalidator>
             
-            <br />
-            
+            <br />           
             <br />
             
         </div>
@@ -108,7 +101,7 @@
     <asp:Label ID="Label6" runat="server" Text="Confirm Password:" CssClass="auto-style2"></asp:Label>
     
     <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
-              <asp:requiredfieldvalidator runat="server" errormessage="Please confirm password" ControlToValidate="txtConfirmPassword" CssClass="auto-style3" style="color: #FF0000"></asp:requiredfieldvalidator>
+    <asp:CompareValidator ID="lblConfirmPassword" runat="server" ControlToValidate="txtPassword" ControlToCompare="txtConfirmPassword" ErrorMessage="Passwords must match" style="color: #FF0000"></asp:CompareValidator>
             <br />
             <br />
         </div>
@@ -124,11 +117,26 @@
     <br />
 
 </div>
+           <div>
+               <asp:Label ID="lblRole" runat="server" Text="Role:"></asp:Label> 
+               
+               <asp:TextBox ID="txtRole" runat="server" placeholder="3" ReadOnly="true"></asp:TextBox>
+               <br />
+               <br />
+           </div>
     
 
+           <div>
+               <asp:Label ID="lblError" runat="server" Text="" style="color: #FF0000"></asp:Label>
+               <br />
+               <br />
+           </div>
 
         <div>
     <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="Register_Click" style="height: 26px" />
+
+            <br />
+            
 
 </div>
 </div>

@@ -16,18 +16,7 @@ namespace TestClass
             Assert.IsNotNull(ACustomer);
         }
 
-        [TestMethod]
-        public void ActiveOk()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //create some test data to assign to the property 
-            Boolean Active = true;
-            //assign the data to the property
-            ACustomer.Active = Active;
-            //test to see that the two values are the same
-            Assert.AreEqual(ACustomer.Active, Active);
-        }
+        
 
         [TestMethod]
         public void AddressOk()
@@ -53,19 +42,6 @@ namespace TestClass
             ACustomer.CustomerID = CustomerID;
             //test to see that the two values are the same
             Assert.AreEqual(ACustomer.CustomerID, CustomerID);
-        }
-
-        [TestMethod]
-        public void DateRegisteredOk()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //create some test data to assign to the property 
-            DateTime DateRegistered = DateTime.Now.Date;
-            //assign the data to the property
-            ACustomer.DateRegistered = DateRegistered;
-            //test to see that the two values are the same
-            Assert.AreEqual(ACustomer.DateRegistered, DateRegistered);
         }
 
         [TestMethod]
@@ -142,14 +118,14 @@ namespace TestClass
             string Error = "";
             //create some test data to test the method
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -169,8 +145,10 @@ namespace TestClass
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
+
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -190,8 +168,10 @@ namespace TestClass
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
+
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -205,14 +185,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "aa"; //this should be ok
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -226,14 +206,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should be ok
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -247,14 +227,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should be ok
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -268,14 +248,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should trigger an error
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -289,14 +269,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "aaaaaaaaaaaaaaaaaaaaaaaaa"; //this should be ok
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -311,14 +291,14 @@ namespace TestClass
             //create some test data to use with the method 
             string Address = "";
             Address = Address.PadRight(500, 'a'); //this should fail
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -332,14 +312,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = ""; //this should trigger an error
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -353,14 +333,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "s"; //this should be ok
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -374,14 +354,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "ss"; //this should be ok
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -395,14 +375,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "sssssssssssssssssssssssssssssssssssssssssssssssss"; //this should be ok
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -416,14 +396,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "ssssssssssssssssssssssssssssssssssssssssssssssssss"; //this should be ok
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -443,8 +423,9 @@ namespace TestClass
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -458,14 +439,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "sssssssssssssssssssssssss"; //this should be ok
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -480,15 +461,15 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "";
             Firstname = Firstname.PadRight(500, 's'); //this should fail
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -502,14 +483,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = ""; //this should trigger an error
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -529,8 +510,9 @@ namespace TestClass
             string Surname = "k"; //this should be ok
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -544,14 +526,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "kk"; //this should be ok
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -565,14 +547,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"; //this should be ok
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -586,14 +568,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"; //this should be ok
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -607,14 +589,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"; //this should trigger an error
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -628,14 +610,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "kkkkkkkkkkkkkkkkkkkkkkkkk"; //this should be ok
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -649,15 +631,15 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "";
             Surname = Surname.PadRight(500, 'k'); //this should fail
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -671,14 +653,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = ""; //this should trigger an error
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -692,14 +674,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "s"; //this should be ok
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -713,14 +695,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "ss"; //this should be ok
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -734,14 +716,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "sssssssssssssssssssssssssssssssssssssssssssssssss"; //this should be ok
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -755,14 +737,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "ssssssssssssssssssssssssssssssssssssssssssssssssss"; //this should be ok
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -776,14 +758,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "sssssssssssssssssssssssssssssssssssssssssssssssssss"; //this should trigger an error
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -797,14 +779,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "sssssssssssssssssssssssss"; //this should be ok
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -818,15 +800,15 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "";
             EmailAddress = EmailAddress.PadRight(500, 's'); //this should fail
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -840,14 +822,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = ""; // this should trigger an error
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -867,8 +849,9 @@ namespace TestClass
             string Surname = "Kaur";
             string Password = "a"; // this should be ok
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -882,14 +865,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "aa"; // this should be ok
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -903,14 +886,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "aaaaaaaaaaaaaaa"; // this should be ok
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -924,14 +907,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "aaaaaaaaaaaaaaaa"; // this should be ok
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -945,14 +928,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "aaaaaaaaaaaaaaaaa"; // this should trigger an error
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -966,14 +949,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "aaaaaaaa"; // this should be ok
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -987,15 +970,15 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "";
             Password = Password.PadRight(500, 's'); //this should fail
             string TelephoneNumber = "01161357956";
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -1009,14 +992,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = ""; //this should trigger an error
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -1030,14 +1013,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "0"; //this should be ok
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1051,14 +1034,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01"; //this should be ok
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1072,14 +1055,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "0123456789"; //this should be ok
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1093,14 +1076,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01234567890"; //this should be ok
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1114,14 +1097,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "012345678901"; //this should trigger an error
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -1135,14 +1118,14 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "01234"; //this should be ok
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1156,175 +1139,15 @@ namespace TestClass
             string Error = "";
             //create some test data to use with the method 
             string Address = "20 Star Street";
-            string DateRegistered = DateTime.Now.Date.ToString();
             string EmailAddress = "Sukhjit@hotmail.co.uk";
             string Firstname = "Sukhjit";
             string Surname = "Kaur";
             string Password = "Amsterdam";
             string TelephoneNumber = "";
             TelephoneNumber = TelephoneNumber.PadRight(500, '0'); //this should fail
+            int RoleId = 3;
             //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void DateRegisteredExtremeMin()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //string variable to store any error message
-            string Error = "";
-            //create some test data to use with the method 
-            string Address = "20 Star Street";
-            string EmailAddress = "Sukhjit@hotmail.co.uk";
-            string Firstname = "Sukhjit";
-            string Surname = "Kaur";
-            string Password = "Amsterdam";
-            string TelephoneNumber = "01161357956";
-            //create a variable to store the test date data
-            DateTime TestDate;
-            //set the date to todays date
-            TestDate = DateTime.Now.Date;
-            //change the date to whatever the date is less than 100 years
-            TestDate = TestDate.AddYears(-100);
-            //convert the date variable to a string variable
-            string DateRegistered = TestDate.ToString();
-            //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void DateRegisteredMinLessOne()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //string variable to store any error message
-            string Error = "";
-            //create some test data to use with the method 
-            string Address = "20 Star Street";
-            string EmailAddress = "Sukhjit@hotmail.co.uk";
-            string Firstname = "Sukhjit";
-            string Surname = "Kaur";
-            string Password = "Amsterdam";
-            string TelephoneNumber = "01161357956";
-            //create a variable to store the test date data
-            DateTime TestDate;
-            //set the date to todays date
-            TestDate = DateTime.Now.Date;
-            //change the date to whatever the date is less than 1 day
-            TestDate = TestDate.AddDays(-1);
-            //convert the date variable to a string variable
-            string DateRegistered = TestDate.ToString();
-            //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void DateRegisteredMin()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //string variable to store any error message
-            string Error = "";
-            //create some test data to use with the method 
-            string Address = "20 Star Street";
-            string EmailAddress = "Sukhjit@hotmail.co.uk";
-            string Firstname = "Sukhjit";
-            string Surname = "Kaur";
-            string Password = "Amsterdam";
-            string TelephoneNumber = "01161357956";
-            //create a variable to store the test date data
-            DateTime TestDate;
-            //set the date to todays date
-            TestDate = DateTime.Now.Date;
-            //convert the date variable to a string variable
-            string DateRegistered = TestDate.ToString();
-            //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void DateRegisteredMinPlusOne()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //string variable to store any error message
-            string Error = "";
-            //create some test data to use with the method 
-            string Address = "20 Star Street";
-            string EmailAddress = "Sukhjit@hotmail.co.uk";
-            string Firstname = "Sukhjit";
-            string Surname = "Kaur";
-            string Password = "Amsterdam";
-            string TelephoneNumber = "01161357956";
-            //create a variable to store the test date data
-            DateTime TestDate;
-            //set the date to todays date
-            TestDate = DateTime.Now.Date;
-            //change the date to whatever the date is plus 1 day
-            TestDate = TestDate.AddDays(1);
-            //convert the date variable to a string variable
-            string DateRegistered = TestDate.ToString();
-            //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void DateRegisteredExtremeMax()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //string variable to store any error message
-            string Error = "";
-            //create some test data to use with the method 
-            string Address = "20 Star Street";
-            string EmailAddress = "Sukhjit@hotmail.co.uk";
-            string Firstname = "Sukhjit";
-            string Surname = "Kaur";
-            string Password = "Amsterdam";
-            string TelephoneNumber = "01161357956";
-            //create a variable to store the test date data
-            DateTime TestDate;
-            //set the date to todays date
-            TestDate = DateTime.Now.Date;
-            //change the date to whatever the date is less than 1 day
-            TestDate = TestDate.AddYears(100);
-            //convert the date variable to a string variable
-            string DateRegistered = TestDate.ToString();
-            //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void DateRegisteredInvalidData()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //string variable to store any error message
-            string Error = "";
-            //create some test data to use with the method 
-            string Address = "20 Star Street";
-            string EmailAddress = "Sukhjit@hotmail.co.uk";
-            string Firstname = "Sukhjit";
-            string Surname = "Kaur";
-            string Password = "Amsterdam";
-            string TelephoneNumber = "01161357956";
-            //set the DateRegistered to a non date value
-            string DateRegistered = "This is note a date!";
-            //invoke the method
-            Error = ACustomer.Valid(Address, DateRegistered, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = ACustomer.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -1367,28 +1190,6 @@ namespace TestClass
         }
 
         [TestMethod]
-        public void TestActiveFound()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //boolean variable to store the result of the search 
-            Boolean Found = false;
-            //boolean variable to record if data is OK (assume it is)
-            Boolean OK = true;
-            //create some test data to use with the method 
-            Int32 CustomerID = 2;
-            //invoke the method
-            Found = ACustomer.Find(CustomerID);
-            //check the property
-            if (ACustomer.Active != true)
-            {
-                OK = false;
-            }
-            //test to see that the result is correct
-            Assert.IsTrue(OK);
-        }
-
-        [TestMethod]
         public void TestAddressFound()
         {
             //create an instance of the class we want to create
@@ -1403,28 +1204,6 @@ namespace TestClass
             Found = ACustomer.Find(CustomerID);
             //check the property
             if (ACustomer.Address != "72 Freedom Street")
-            {
-                OK = false;
-            }
-            //test to see that the result is correct
-            Assert.IsTrue(OK);
-        }
-
-        [TestMethod]
-        public void TestDateRegisteredFound()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //boolean variable to store the result of the search 
-            Boolean Found = false;
-            //boolean variable to record if data is OK (assume it is)
-            Boolean OK = true;
-            //create some test data to use with the method 
-            Int32 CustomerID = 2;
-            //invoke the method
-            Found = ACustomer.Find(CustomerID);
-            //check the property
-            if (ACustomer.DateRegistered != Convert.ToDateTime("20/02/2019"))
             {
                 OK = false;
             }

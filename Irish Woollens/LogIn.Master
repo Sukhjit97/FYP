@@ -38,7 +38,7 @@
     </li>
     <li><a href="AddKnitter.aspx">Add New Knitter</a>
     </li>
-    <li><a href="FindStaff.aspx">Search Knitter</a>
+    <li><a href="SearchKnitter.aspx">Search Knitter</a>
     </li>
     <li><a href="ManageStaff.aspx">Manage Staff Accounts</a>
     </li>
@@ -58,6 +58,8 @@
     <li><a href="ViewCatalogue.aspx">View Catalogue</a>
     </li>
     <li><a href="Orders.aspx">My Orders</a>
+    </li>
+    <li><a href="StaffEditDetails.aspx">Update Personal Details</a>
     </li>
     <li><a href="FindItem.aspx">Search Item</a>
     </li>
@@ -93,7 +95,7 @@
 
 
           <div class="buttons">
-              <asp:Button ID="btnLogout" runat="server" Text="Logout" style="font-family: 'Kristen ITC'; font-size: small; background-color: #FF9966" Width="59px" OnClick="btnLogout_Click"  />
+              <asp:Button ID="btnLogout" runat="server" Text="Logout" style="font-size: small; background-color: #E1E1E1" Width="59px" OnClick="btnLogout_Click"  />
           </div>
 
 

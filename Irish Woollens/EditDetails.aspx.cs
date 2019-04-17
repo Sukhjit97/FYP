@@ -51,11 +51,6 @@ namespace Irish_Woollens
             }
         }
 
-        protected void btnCancel_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("homepage.aspx");
-        }
-
         protected void btnEditDetails_Click(object sender, EventArgs e)
         {
             string enterPassword;
