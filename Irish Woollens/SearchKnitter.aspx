@@ -34,9 +34,7 @@
 
 <asp:GridView ID="gvStaff" runat="server" AutoGenerateColumns="False" AllowPaging="True"
 
-OnPageIndexChanging="OnPaging" DataKeyNames="StaffID" CellPadding="4" ForeColor="#333333" GridLines="None" Width="833px"  >
-
-    <AlternatingRowStyle BackColor="White" />
+OnPageIndexChanging="OnPaging" DataKeyNames="StaffID" CellPadding="4" Width="833px" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px"  >
 
 <Columns>
 
@@ -51,16 +49,15 @@ OnPageIndexChanging="OnPaging" DataKeyNames="StaffID" CellPadding="4" ForeColor=
 
 </Columns>
 
-    <EditRowStyle BackColor="#2461BF" />
-    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-    <RowStyle BackColor="#EFF3FB" />
-    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-    <sortedascendingcellstyle backcolor="#F5F7FB" />
-    <sortedascendingheaderstyle backcolor="#6D95E1" />
-    <sorteddescendingcellstyle backcolor="#E9EBEF" />
-    <sorteddescendingheaderstyle backcolor="#4870BE" />
+    <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+    <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+    <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+    <RowStyle BackColor="White" ForeColor="#003399" />
+    <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+    <sortedascendingcellstyle backcolor="#EDF6F6" />
+    <sortedascendingheaderstyle backcolor="#0D4AC4" />
+    <sorteddescendingcellstyle backcolor="#D6DFDF" />
+    <sorteddescendingheaderstyle backcolor="#002876" />
 
 </asp:GridView>
     <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [StaffID], [Address], [EmailAddress], [Firstname], [Surname], [TelephoneNumber] FROM [tblStaff]"></asp:SqlDataSource>--%>

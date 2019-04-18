@@ -102,7 +102,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £12.00</p>
         <p class ="ItemDescrip">Blue ladies cardigan with a white star design</p>
-          <p><asp:Button ID="btnbuynow1" class="button" runat="server" Text="Buynow" OnClick="btnbuynow1_Click"/></p>
+          <p><asp:Button ID="btnbuynow1" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow1_Click"/></p>
         <p>&nbsp;</p>
       </div>
     </div>
@@ -113,7 +113,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £37.00</p>
         <p class ="ItemDescrip">Cream coloured Men's sweater</p>
-        <p><asp:Button ID="btnbuynow2" class="button" runat="server" Text="Buynow" OnClick="btnbuynow2_Click"/></p>
+        <p><asp:Button ID="btnbuynow2" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow2_Click"/></p>
       </div>
     </div>
   </div>
@@ -123,7 +123,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £25.50</p>
         <p class ="ItemDescrip">Festive Jumper</p>
-        <p><asp:Button ID="btnbuynow3" class="button" runat="server" Text="Buynow" OnClick="btnbuynow3_Click"/></p>
+        <p><asp:Button ID="btnbuynow3" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow3_Click"/></p>
       </div>
     </div>
   </div>
@@ -137,7 +137,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £18.68</p>
         <p class ="ItemDescrip">Bambi Jumper for ladies</p>
-        <p><asp:Button ID="btnbuynow4" class="button" runat="server" Text="Buynow" OnClick="btnbuynow4_Click"/></p>
+        <p><asp:Button ID="btnbuynow4" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow4_Click"/></p>
       </div>
     </div>
   </div>
@@ -147,7 +147,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £30.00</p>
         <p class ="ItemDescrip">light coloured sweater</p>
-        <p><asp:Button ID="btnbuynow5" class="button" runat="server" Text="Buynow" OnClick="btnbuynow5_Click"/></p>
+        <p><asp:Button ID="btnbuynow5" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow5_Click"/></p>
       </div>
     </div>
   </div>
@@ -157,7 +157,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £50.00</p>
         <p class ="ItemDescrip">Nice stylish off shoulders ladies sweater</p>
-        <p><asp:Button ID="btnbuynow6" class="button" runat="server" Text="Buynow" OnClick="btnbuynow6_Click"/></p>
+        <p><asp:Button ID="btnbuynow6" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow6_Click"/></p>
       </div>
     </div>
   </div>
@@ -171,7 +171,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £34.00</p>
         <p class ="ItemDescrip">Rainbow coloured striped cardigan</p>
-         <p><asp:Button ID="btnbuynow7" class="button" runat="server" Text="Buynow" OnClick="btnbuynow7_Click" /></p>
+         <p><asp:Button ID="btnbuynow7" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow7_Click" /></p>
         <%--<p><button id="btnbuynow "  onclick="btnbuynow">Buy Now</button></p>--%>
       </div>
     </div>
@@ -183,7 +183,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £34.00</p>
         <p class ="ItemDescrip">Rainbow coloured striped cardigan</p>
-         <p><asp:Button ID="btnbuynow8" class="button" runat="server" Text="Buynow" OnClick="btnbuynow8_Click"/></p>
+         <p><asp:Button ID="btnbuynow8" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow8_Click"/></p>
       </div>
     </div>
   </div>
@@ -193,7 +193,7 @@ html {
       <div class="container">
         <p class="titles">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; £22.50</p>
         <p class ="ItemDescrip">Birght Orange/Yellow cardigan</p>
-        <p><asp:Button ID="btnbuynow9" class="button" runat="server" Text="Buynow" OnClick="btnbuynow9_Click"/></p>
+        <p><asp:Button ID="btnbuynow9" class="button" runat="server" Text="Buy Now" OnClick="btnbuynow9_Click"/></p>
       </div>
     </div>
   </div>

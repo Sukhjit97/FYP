@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddKnitter.aspx" />
+    <Content Include="AddNewItem.aspx" />
     <Content Include="AllocateOrders.aspx" />
     <Content Include="CSS\Styling.css" />
     <Content Include="CSS\User.css" />
@@ -106,14 +107,17 @@
     <Content Include="login_manager.aspx" />
     <Content Include="login_staff.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="ManageItems.aspx" />
     <Content Include="ManageStaff.aspx" />
     <Content Include="Payment.aspx" />
     <Content Include="Quotation.aspx" />
     <Content Include="QuotationInquiry.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="SearchAllocatedOrders.aspx" />
+    <Content Include="SearchItem.aspx" />
     <Content Include="SearchKnitter.aspx" />
     <Content Include="SearchOrders.aspx" />
+    <Content Include="StaffCatalogue.aspx" />
     <Content Include="StaffEditDetails.aspx" />
     <Content Include="ViewCatalogue.aspx" />
     <Content Include="ViewCatalogueWeb.aspx" />
@@ -127,6 +131,13 @@
     </Compile>
     <Compile Include="AddKnitter.aspx.designer.cs">
       <DependentUpon>AddKnitter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewItem.aspx.cs">
+      <DependentUpon>AddNewItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddNewItem.aspx.designer.cs">
+      <DependentUpon>AddNewItem.aspx</DependentUpon>
     </Compile>
     <Compile Include="AllocateOrders.aspx.cs">
       <DependentUpon>AllocateOrders.aspx</DependentUpon>
@@ -198,6 +209,13 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ManageItems.aspx.cs">
+      <DependentUpon>ManageItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageItems.aspx.designer.cs">
+      <DependentUpon>ManageItems.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ManageStaff.aspx.cs">
       <DependentUpon>ManageStaff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -241,6 +259,13 @@
     <Compile Include="SearchAllocatedOrders.aspx.designer.cs">
       <DependentUpon>SearchAllocatedOrders.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SearchItem.aspx.cs">
+      <DependentUpon>SearchItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchItem.aspx.designer.cs">
+      <DependentUpon>SearchItem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SearchKnitter.aspx.cs">
       <DependentUpon>SearchKnitter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,6 +279,13 @@
     </Compile>
     <Compile Include="SearchOrders.aspx.designer.cs">
       <DependentUpon>SearchOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffCatalogue.aspx.cs">
+      <DependentUpon>StaffCatalogue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffCatalogue.aspx.designer.cs">
+      <DependentUpon>StaffCatalogue.aspx</DependentUpon>
     </Compile>
     <Compile Include="StaffEditDetails.aspx.cs">
       <DependentUpon>StaffEditDetails.aspx</DependentUpon>

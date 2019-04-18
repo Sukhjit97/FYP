@@ -31,11 +31,13 @@
     </p>
 
        <div class="Quotation"
-           style="height: 210px">
+           style="height: 270px">
 
    <div>
-       <asp:Label ID="Label1" runat="server" Text="Firstname:" CssClass="auto-style1"></asp:Label><asp:TextBox ID="txtFirstname" runat="server"></asp:TextBox>
+       
+       <asp:Label ID="Label1" runat="server" Text="Firstname:" CssClass="auto-style1"></asp:Label> <asp:DropDownList ID="ddlFirstname" runat="server" DataSourceID="SqlDataSource2" DataTextField="Firstname" DataValueField="Firstname" Height="23px" Width="163px"></asp:DropDownList>
 
+       <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [Firstname] FROM [tblStaff]"></asp:SqlDataSource>
        <br />
 
        <br />
@@ -43,8 +45,9 @@
    </div> 
   
     <div> 
-       <asp:Label ID="Label2" runat="server" Text="Item ID:" CssClass="auto-style1"></asp:Label><asp:TextBox ID="txtItemID" runat="server"></asp:TextBox>
+       <asp:Label ID="Label2" runat="server" Text="Item ID:" CssClass="auto-style1"></asp:Label> <asp:DropDownList ID="ddlItemID" runat="server" DataSourceID="SqlDataSource1" DataTextField="ItemID" DataValueField="ItemID" Height="23px" Width="129px"></asp:DropDownList>
 
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [ItemID] FROM [tblItem]"></asp:SqlDataSource>
         <br />
 
         <br />
@@ -52,23 +55,25 @@
    </div> 
 
   <div> 
-      <asp:Label ID="Label3" runat="server" Text="Item Name:" CssClass="auto-style1"></asp:Label><asp:TextBox ID="txtItemName" runat="server"></asp:TextBox>
+      <asp:Label ID="Label3" runat="server" Text="Item Name:" CssClass="auto-style1"></asp:Label> <asp:DropDownList ID="ddlItemName" runat="server" DataSourceID="SqlDataSource3" DataTextField="ItemName" DataValueField="ItemName" Height="23px" Width="214px"></asp:DropDownList>
 
+      <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [ItemName] FROM [tblItem]"></asp:SqlDataSource>
       <br />
 
       <br />
 
   </div>   
 
-   <div> <asp:Label ID="Label4" runat="server" Text="Quotation:" CssClass="auto-style1"></asp:Label><asp:TextBox ID="txtQuotation" runat="server"></asp:TextBox>
+   <div> <asp:Label ID="Label4" runat="server" Text="Quotation:" CssClass="auto-style1"></asp:Label> <asp:TextBox ID="txtQuotation" runat="server"></asp:TextBox>
+
+       <br />
 
        <br />
 
        <br />
 
    </div>
-
-        <asp:Button ID="btnRequestChange" runat="server" Text="Request Change" style="font-family: 'Arial Unicode MS'" OnClick="btnRequestChange_Click"/>
+           <asp:Button ID="btnRequestChange" runat="server" Text="Requet Change" OnClick="btnRequestChange_Click" />
          </div>
 
     <br />

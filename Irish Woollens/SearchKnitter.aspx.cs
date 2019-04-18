@@ -84,7 +84,5 @@ namespace Irish_Woollens
             this.SearchStaff();
 
         }
-
-
     }
 }

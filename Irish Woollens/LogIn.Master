@@ -26,7 +26,7 @@
   <ul class="topnav">
     <li><a class="active" href="homepage.aspx">Home</a>
     </li>
-    <li><a href="ViewCatalogue.aspx">View Catalogue</a>
+    <li><a href="StaffCatalogue.aspx">View Catalogue</a>
     </li>
     <li><a href="SearchOrders.aspx">Search Orders</a>
     </li>
@@ -36,11 +36,11 @@
     </li>
     <li><a href="SearchItem.aspx">Search Item</a>
     </li>
-    <li><a href="AddKnitter.aspx">Add New Knitter</a>
-    </li>
     <li><a href="SearchKnitter.aspx">Search Knitter</a>
     </li>
     <li><a href="ManageStaff.aspx">Manage Staff Accounts</a>
+    </li>
+    <li><a href="AddKnitter.aspx">Add New Knitter</a>
     </li>
     <li><a href="QuotationInquiry.aspx">Quotation Inquiry</a>
     </li>
@@ -55,13 +55,15 @@
   <ul class="topnav">
     <li><a class="active" href="homepage.aspx">Home</a>
     </li>
-    <li><a href="ViewCatalogue.aspx">View Catalogue</a>
+    <li><a href="StaffCatalogue.aspx">View Catalogue</a>
     </li>
-    <li><a href="Orders.aspx">My Orders</a>
+    <li><a href="Orders.aspx">Orders</a>
     </li>
     <li><a href="StaffEditDetails.aspx">Update Personal Details</a>
     </li>
-    <li><a href="FindItem.aspx">Search Item</a>
+    <li><a href="SearchItem.aspx">Search Item</a>
+    </li>
+    <li><a href="ManageItems.aspx">Manage Items</a>
     </li>
     <li><a href="Quotation.aspx">Raise a Quotation</a>
     </li>
@@ -77,8 +79,6 @@
     <li><a class="active" href="homepage.aspx">Home</a>
     </li>
     <li><a href="ViewCatalogue.aspx">View Catalogue</a>
-    </li>
-    <li><a href="PlaceOrders.aspx">Place Orders</a>
     </li>
     <li><a href="EditDetails.aspx">Edit Personal Details</a>
     </li>

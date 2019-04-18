@@ -19,15 +19,20 @@ namespace Irish_Woollens
 
         protected void btnRequestChange_Click(object sender, EventArgs e)
         {
-            con.Open();
+            {
+                //connect to DB
+                clsDataConnection DB = new clsDataConnection();
+                //set parameters
+                DB.AddParameter("@Firstname", ddlFirstname.SelectedItem.Text);
+                DB.AddParameter("@ItemID", ddlItemID.SelectedItem.Text);
+                DB.AddParameter("@ItemName", ddlItemName.SelectedItem.Text);
+                DB.AddParameter("@Quotation", txtQuotation.Text);
 
-            String qry = "insert into tblQuotation(Firstname, ItemID, ItemName, Quotation)values('" + txtFirstname.Text + "','" + txtItemID.Text + "','" + txtItemName.Text + "','" + txtQuotation.Text + "')";
-
-            SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.ExecuteNonQuery();
-            Response.Write("<script type='text/javascript'>alert('Thank you for your Quotation. We will take this into consideration.');</script>");
-            //Response.Redirect("homepage.aspx");
-            con.Close();
+                //execute command
+                DB.Execute("sproc_tblQuotation_Insert");
+                //javascript message to confirm quotation placed 
+                Response.Write("<script type='text/javascript'>alert('Thank you for your Quotation. We will take this into consideration.');</script>");
+            }
         }
     }
 }
