@@ -102,13 +102,14 @@ namespace TestClass
             //var to store the primary key
             Int32 PrimaryKey = 1;
             //set its properties
-            TestItem.Address = "12 Square Street";
+            TestItem.Address = "8 Nursery Street";
             //TestItem.StaffID = 1;
-            TestItem.EmailAddress = "Some@hotmail.co.uk";
-            TestItem.Firstname = "Hind";
-            TestItem.Surname = "Sink";
-            TestItem.Password = "Hello123!";
-            TestItem.TelephoneNumber = "01164534587";
+            TestItem.EmailAddress = "staff@staff.com";
+            TestItem.Firstname = "Sansa";
+            TestItem.Surname = "Stark";
+            TestItem.Password = "Lw0BPq9LJjnDJCH2JW2FlY8gKt3fNSX2Yl3Al+vKLto=";
+            TestItem.TelephoneNumber = "15647895233";
+            TestItem.RoleId = 2;
             //set ThisStaff to the test data
             AllStaff.ThisStaff = TestItem;
             //add the record

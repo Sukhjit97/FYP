@@ -108,8 +108,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -128,8 +129,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -148,8 +150,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -168,8 +171,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -188,8 +192,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -208,8 +213,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -228,8 +234,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -248,8 +255,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -269,8 +277,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -289,8 +298,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -309,8 +319,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -329,8 +340,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -349,8 +361,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -369,8 +382,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -389,8 +403,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -409,8 +424,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -430,8 +446,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -450,8 +467,9 @@ namespace TestClass
             string Surname = ""; //this should trigger an error
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -470,8 +488,9 @@ namespace TestClass
             string Surname = "s"; //this should be ok
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -490,8 +509,9 @@ namespace TestClass
             string Surname = "ss"; //this should be ok
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -510,8 +530,9 @@ namespace TestClass
             string Surname = "sssssssssssssssssssssssssssssssssssssssssssssssss"; //this should be ok
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -530,8 +551,9 @@ namespace TestClass
             string Surname = "ssssssssssssssssssssssssssssssssssssssssssssssssss"; //this should be ok
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -550,8 +572,9 @@ namespace TestClass
             string Surname = "sssssssssssssssssssssssssssssssssssssssssssssssssss"; //this should trigger an error
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -570,8 +593,9 @@ namespace TestClass
             string Surname = "sssssssssssssssssssssssss"; //this should be ok
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -591,8 +615,9 @@ namespace TestClass
             Surname = Surname.PadRight(500, 's');
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -611,8 +636,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -631,8 +657,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -651,8 +678,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -671,8 +699,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -691,8 +720,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -711,8 +741,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -731,8 +762,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -752,8 +784,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01169876543";
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -772,8 +805,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = ""; //this should trigger an error
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -792,8 +826,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "0"; //this should be ok
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -812,8 +847,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01"; //this should be ok
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -832,8 +868,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "0123456789"; //this should be ok
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -852,8 +889,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01234567890"; //this should be ok
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -872,8 +910,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "012345678901"; //this should trigger an error
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -892,8 +931,9 @@ namespace TestClass
             string Surname = "Smith";
             string Password = "Leicester";
             string TelephoneNumber = "01234"; //this should be ok
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -913,8 +953,9 @@ namespace TestClass
             string Password = "Leicester";
             string TelephoneNumber = "";
             TelephoneNumber = TelephoneNumber.PadRight(500, '0'); //this should fail
+            int RoleId = 2;
             //invoke the method
-            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber);
+            Error = AStaff.Valid(Address, EmailAddress, Firstname, Surname, Password, TelephoneNumber, RoleId);
             //test to see that the result is correct
             Assert.AreNotEqual(Error, "");
         }
@@ -1014,7 +1055,7 @@ namespace TestClass
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the property
-            if (AStaff.Firstname != "Sanza")
+            if (AStaff.Firstname != "Sansa")
             {
                 OK = false;
             }
@@ -1058,7 +1099,7 @@ namespace TestClass
             //invoke the method
             Found = AStaff.Find(StaffID);
             //check the property
-            if (AStaff.TelephoneNumber != "15647895234")
+            if (AStaff.TelephoneNumber != "15647895233")
             {
                 OK = false;
             }

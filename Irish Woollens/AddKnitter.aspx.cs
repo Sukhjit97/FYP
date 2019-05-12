@@ -20,7 +20,7 @@ namespace Irish_Woollens
 
         }
 
-        //function for adding new records
+        //function for adding new knitters
         void Add()
         {
             clsStaffCollection StaffList = new clsStaffCollection();
@@ -30,7 +30,7 @@ namespace Irish_Woollens
                                                            txtSurname.Text,
                                                            txtPassword.Text,
                                                            txtTelephoneNumber.Text,
-                                                           txtRole.Text);
+                                                           Convert.ToInt32(txtRole));
 
 
             string enterPassword;
