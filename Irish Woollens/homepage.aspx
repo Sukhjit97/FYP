@@ -88,7 +88,7 @@
     <br />
 
 
-<div class="row">
+<%--<div class="row">
   <div class="column">
     <img src="Jumper-1.jpg" alt="Jumper 1" style="width:35%">
   </div>
@@ -98,7 +98,7 @@
   <div class="column">
     <img src="Jumper-3.jpg" alt="Jumper 3" style="width:35%">
   </div>
-</div>
+</div>--%>
 
     <br />
 

@@ -34,20 +34,17 @@
 
 <asp:GridView ID="gvStaff" runat="server" AutoGenerateColumns="False" AllowPaging="True"
 
-OnPageIndexChanging="OnPaging" DataKeyNames="StaffID" CellPadding="4" Width="833px" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px"  >
+OnPageIndexChanging="OnPaging" CellPadding="4" Width="833px" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" DataKeyNames="StaffID" >
 
-<Columns>
-
-<asp:BoundField DataField="StaffID" HeaderText="StaffID" SortExpression="StaffID" InsertVisible="False" ReadOnly="True" />
-
-<asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
-
-    <asp:BoundField DataField="EmailAddress" HeaderText="EmailAddress" SortExpression="EmailAddress"></asp:BoundField>
-    <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname"></asp:BoundField>
-    <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname"></asp:BoundField>
-    <asp:BoundField DataField="TelephoneNumber" HeaderText="TelephoneNumber" SortExpression="TelephoneNumber"></asp:BoundField>
-
-</Columns>
+    <Columns>
+        <asp:BoundField DataField="StaffID" HeaderText="StaffID" InsertVisible="False" ReadOnly="True" SortExpression="StaffID" />
+        <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
+        <asp:BoundField DataField="EmailAddress" HeaderText="EmailAddress" SortExpression="EmailAddress" />
+        <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />
+        <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname" />
+        <asp:BoundField DataField="TelephoneNumber" HeaderText="TelephoneNumber" SortExpression="TelephoneNumber" />
+        <asp:BoundField DataField="RoleId" HeaderText="RoleId" SortExpression="RoleId" />
+    </Columns>
 
     <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
     <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
@@ -60,7 +57,8 @@ OnPageIndexChanging="OnPaging" DataKeyNames="StaffID" CellPadding="4" Width="833
     <sorteddescendingheaderstyle backcolor="#002876" />
 
 </asp:GridView>
-    <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [StaffID], [Address], [EmailAddress], [Firstname], [Surname], [TelephoneNumber] FROM [tblStaff]"></asp:SqlDataSource>--%>
+    <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 130419\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [StaffID], [Address], [EmailAddress], [Firstname], [Surname], [TelephoneNumber], [RoleId] FROM [tblStaff]"></asp:SqlDataSource>--%>
+<%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 130419\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT [StaffID], [Address], [EmailAddress], [Firstname], [Surname], [TelephoneNumber] FROM [tblStaff]"></asp:SqlDataSource>--%>
 </asp:Content>
 
 

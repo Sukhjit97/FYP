@@ -49,7 +49,7 @@
             </asp:GridView>
 
         </div>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" DeleteCommand="DELETE FROM [tblQuotation] WHERE [QuotationID] = @QuotationID" InsertCommand="INSERT INTO [tblQuotation] ([Firstname], [ItemName], [ItemID], [Quotation], [Status]) VALUES (@Firstname, @ItemName, @ItemID, @Quotation, @Status)" SelectCommand="SELECT * FROM [tblQuotation]" UpdateCommand="UPDATE [tblQuotation] SET [Firstname] = @Firstname, [ItemName] = @ItemName, [ItemID] = @ItemID, [Quotation] = @Quotation, [Status] = @Status WHERE [QuotationID] = @QuotationID">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 130419\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" DeleteCommand="DELETE FROM [tblQuotation] WHERE [QuotationID] = @QuotationID" InsertCommand="INSERT INTO [tblQuotation] ([Firstname], [ItemName], [ItemID], [Quotation], [Status]) VALUES (@Firstname, @ItemName, @ItemID, @Quotation, @Status)" SelectCommand="SELECT * FROM [tblQuotation]" UpdateCommand="UPDATE [tblQuotation] SET [Firstname] = @Firstname, [ItemName] = @ItemName, [ItemID] = @ItemID, [Quotation] = @Quotation, [Status] = @Status WHERE [QuotationID] = @QuotationID">
                 <DeleteParameters>
                     <asp:Parameter Name="QuotationID" Type="Int32" />
                 </DeleteParameters>
@@ -99,7 +99,7 @@
             <SortedDescendingCellStyle BackColor="#D6DFDF" />
             <SortedDescendingHeaderStyle BackColor="#002876" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" DeleteCommand="DELETE FROM [tblItem] WHERE [ItemID] = @ItemID" InsertCommand="INSERT INTO [tblItem] ([ItemName], [ItemDescription], [ItemPrice]) VALUES (@ItemName, @ItemDescription, @ItemPrice)" SelectCommand="SELECT * FROM [tblItem]" UpdateCommand="UPDATE [tblItem] SET [ItemName] = @ItemName, [ItemDescription] = @ItemDescription, [ItemPrice] = @ItemPrice WHERE [ItemID] = @ItemID">
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 130419\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" DeleteCommand="DELETE FROM [tblItem] WHERE [ItemID] = @ItemID" InsertCommand="INSERT INTO [tblItem] ([ItemName], [ItemDescription], [ItemPrice]) VALUES (@ItemName, @ItemDescription, @ItemPrice)" SelectCommand="SELECT * FROM [tblItem]" UpdateCommand="UPDATE [tblItem] SET [ItemName] = @ItemName, [ItemDescription] = @ItemDescription, [ItemPrice] = @ItemPrice WHERE [ItemID] = @ItemID">
             <DeleteParameters>
                 <asp:Parameter Name="ItemID" Type="Int32" />
             </DeleteParameters>

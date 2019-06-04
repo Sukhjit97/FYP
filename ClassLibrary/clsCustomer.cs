@@ -142,7 +142,7 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(string Address, string EmailAddress, string Firstname, string Surname, string Password, string TelephoneNumber, int RoleId)
+        public string Valid(string Address, string EmailAddress, string Firstname, string Surname, string Password, string TelephoneNumber, string RoleId)
         {
             //string variable to store the error message
             String Error = "";

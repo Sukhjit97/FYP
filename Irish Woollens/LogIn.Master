@@ -30,8 +30,6 @@
     </li>
     <li><a href="SearchOrders.aspx">Search Orders</a>
     </li>
-    <li><a href="SearchOrderLine.aspx">Search Order Line</a>
-    </li>
     <li><a href="AllocateOrders.aspx">Allocate Orders</a>
     </li>
     <li><a href="SearchItem.aspx">Search Item</a>
@@ -43,8 +41,6 @@
     <li><a href="AddKnitter.aspx">Add New Knitter</a>
     </li>
     <li><a href="QuotationInquiry.aspx">Quotation Inquiry</a>
-    </li>
-    <li><a href="Help.aspx">Help</a>
     </li>
   </ul>
 </div>
@@ -67,8 +63,6 @@
     </li>
     <li><a href="Quotation.aspx">Raise a Quotation</a>
     </li>
-    <li><a href="Help.aspx">Help</a>
-    </li>
   </ul>  
     </div>
 
@@ -85,8 +79,6 @@
     <li><a href="ViewExistingOrders.aspx">View Existing Orders</a>
     </li>
     <li><a href="LoginFeedback.aspx">Feedback</a>
-    </li>
-    <li><a href="Help.aspx">Help</a>
     </li>
   </ul>
 

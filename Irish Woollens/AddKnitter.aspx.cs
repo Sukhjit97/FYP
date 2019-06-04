@@ -30,7 +30,7 @@ namespace Irish_Woollens
                                                            txtSurname.Text,
                                                            txtPassword.Text,
                                                            txtTelephoneNumber.Text,
-                                                           Convert.ToInt32(txtRole));
+                                                           txtRole.Text);
 
 
             string enterPassword;

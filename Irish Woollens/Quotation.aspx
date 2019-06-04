@@ -37,7 +37,7 @@
        
        <asp:Label ID="Label1" runat="server" Text="Firstname:" CssClass="auto-style1"></asp:Label> <asp:DropDownList ID="ddlFirstname" runat="server" DataSourceID="SqlDataSource2" DataTextField="Firstname" DataValueField="Firstname" Height="23px" Width="163px"></asp:DropDownList>
 
-       <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [Firstname] FROM [tblStaff]"></asp:SqlDataSource>
+       <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 130419\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT [Firstname] FROM [tblStaff]"></asp:SqlDataSource>
        <br />
 
        <br />
@@ -47,7 +47,7 @@
     <div> 
        <asp:Label ID="Label2" runat="server" Text="Item ID:" CssClass="auto-style1"></asp:Label> <asp:DropDownList ID="ddlItemID" runat="server" DataSourceID="SqlDataSource1" DataTextField="ItemID" DataValueField="ItemID" Height="23px" Width="129px"></asp:DropDownList>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [ItemID] FROM [tblItem]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 130419\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT [ItemID] FROM [tblItem]"></asp:SqlDataSource>
         <br />
 
         <br />
@@ -57,7 +57,7 @@
   <div> 
       <asp:Label ID="Label3" runat="server" Text="Item Name:" CssClass="auto-style1"></asp:Label> <asp:DropDownList ID="ddlItemName" runat="server" DataSourceID="SqlDataSource3" DataTextField="ItemName" DataValueField="ItemName" Height="23px" Width="214px"></asp:DropDownList>
 
-      <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT [ItemName] FROM [tblItem]"></asp:SqlDataSource>
+      <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 130419\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT [ItemName] FROM [tblItem]"></asp:SqlDataSource>
       <br />
 
       <br />

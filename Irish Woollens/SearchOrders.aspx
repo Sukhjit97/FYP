@@ -70,9 +70,8 @@
         <SortedDescendingHeaderStyle BackColor="#002876" />
         </asp:GridView>
 
+    <asp:SqlDataSource>
 
-
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" DeleteCommand="DELETE FROM [tblOrder] WHERE [OrderID] = @OrderID" InsertCommand="INSERT INTO [tblOrder] ([OrderDate], [CustomerID], [CardNo]) VALUES (@OrderDate, @CustomerID, @CardNo)" SelectCommand="SELECT * FROM [tblOrder]" UpdateCommand="UPDATE [tblOrder] SET [OrderDate] = @OrderDate, [CustomerID] = @CustomerID, [CardNo] = @CardNo WHERE [OrderID] = @OrderID">
             <DeleteParameters>
                 <asp:Parameter Name="OrderID" Type="Int32" />
             </DeleteParameters>

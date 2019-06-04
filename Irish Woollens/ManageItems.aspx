@@ -44,7 +44,24 @@
 
 
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" DeleteCommand="DELETE FROM [tblItem] WHERE [ItemID] = @ItemID" InsertCommand="INSERT INTO [tblItem] ([ItemName], [ItemDescription]) VALUES (@ItemName, @ItemDescription)" SelectCommand="SELECT [ItemID], [ItemName], [ItemDescription] FROM [tblItem]" UpdateCommand="UPDATE [tblItem] SET [ItemName] = @ItemName, [ItemDescription] = @ItemDescription WHERE [ItemID] = @ItemID">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 13041\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" DeleteCommand="DELETE FROM [tblItem] WHERE [ItemID] = @ItemID" InsertCommand="INSERT INTO [tblItem] ([ItemName], [ItemDescription]) VALUES (@ItemName, @ItemDescription)" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [ItemID], [ItemName], [ItemDescription] FROM [tblItem]" UpdateCommand="UPDATE [tblItem] SET [ItemName] = @ItemName, [ItemDescription] = @ItemDescription WHERE [ItemID] = @ItemID">
+            <DeleteParameters>
+                <asp:Parameter Name="ItemID" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="ItemName" Type="String" />
+                <asp:Parameter Name="ItemDescription" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="ItemName" Type="String" />
+                <asp:Parameter Name="ItemDescription" Type="String" />
+                <asp:Parameter Name="ItemID" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+
+
+
+        <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" DeleteCommand="DELETE FROM [tblItem] WHERE [ItemID] = @ItemID" InsertCommand="INSERT INTO [tblItem] ([ItemName], [ItemDescription]) VALUES (@ItemName, @ItemDescription)" SelectCommand="SELECT [ItemID], [ItemName], [ItemDescription] FROM [tblItem]" UpdateCommand="UPDATE [tblItem] SET [ItemName] = @ItemName, [ItemDescription] = @ItemDescription WHERE [ItemID] = @ItemID">--%>
             <DeleteParameters>
                 <asp:Parameter Name="ItemID" Type="Int32" />
             </DeleteParameters>

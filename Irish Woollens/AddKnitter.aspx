@@ -113,13 +113,11 @@
 <div class="gridview">
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="StaffID" DataSourceID="SqlDataSource1" Width="976px" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px">
         <Columns>
-            <asp:CommandField ShowSelectButton="True" />
             <asp:BoundField DataField="StaffID" HeaderText="StaffID" InsertVisible="False" ReadOnly="True" SortExpression="StaffID" />
             <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
             <asp:BoundField DataField="EmailAddress" HeaderText="EmailAddress" SortExpression="EmailAddress" />
             <asp:BoundField DataField="Firstname" HeaderText="Firstname" SortExpression="Firstname" />
             <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname" />
-            <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
             <asp:BoundField DataField="TelephoneNumber" HeaderText="TelephoneNumber" SortExpression="TelephoneNumber" />
             <asp:BoundField DataField="RoleId" HeaderText="RoleId" SortExpression="RoleId" />
         </Columns>
@@ -133,7 +131,8 @@
         <SortedDescendingCellStyle BackColor="#D6DFDF" />
         <SortedDescendingHeaderStyle BackColor="#002876" />
     </asp:GridView>    
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT * FROM [tblStaff]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;H:\Desktop\Viva 130419\Irish-Woollens-Co-Op\App_Data\IrishWoollens.mdf&quot;;Integrated Security=True;Connect Timeout=30" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [StaffID], [Address], [EmailAddress], [Firstname], [Surname], [TelephoneNumber], [RoleId] FROM [tblStaff]"></asp:SqlDataSource>
+<%--    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IrishWoollensConnectionString %>" SelectCommand="SELECT * FROM [tblStaff]"></asp:SqlDataSource>--%>
 </div>
 
 
